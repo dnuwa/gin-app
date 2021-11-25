@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html class="ui-mobile">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+	<title>GIN APP</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="Font-Awesome-4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/css.css" />
+	<script src="bootstrap/js/jquery.min.js"></script>
+	<script src="bootstrap/js/popper.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="bootstrap/js/jquery-1.11.3.min.js"></script>
+	<script src="jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+
+	<!-- TODO: Missing CoffeeScript 2 -->
+	<script type="text/javascript">
+		//<![CDATA[
+		$(window).load(function () {
+			var activePage = $.mobile.pageContainer.pagecontainer("getActivePage"),
+				screen = $.mobile.getScreenHeight(),
+				header = $(".ui-header", activePage).hasClass("ui-header-fixed") ?
+				$(".ui-header", activePage).outerHeight() - 1 :
+				$(".ui-header", activePage).outerHeight(),
+				footer = $(".ui-footer", activePage).hasClass("ui-footer-fixed") ?
+				$(".ui-footer", activePage).outerHeight() - 1 :
+				$(".ui-footer", activePage).outerHeight(),
+				panelheight = screen - header - footer;
+			$(".ui-panel").css({
+				top: header,
+				"min-height": panelheight,
+			});
+		});
+		//]]>
+	</script>
+</head>
+
+<body class="ui-mobile-viewport ui-overlay-a">
+	<div data-role="page" id="pageone" data-url="pageone" tabindex="0"
+		class="ui-page ui-page-theme-a ui-page-footer-fixed ui-page-active">
+		<div data-role="panel" id="navpanel" data-theme="a" data-display="overlay" data-position="right"
+			data-position-fixed="true"
+			class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-panel-closed ui-body-a ui-panel-animate">
+			<div class="ui-panel-inner">
+				<div data-role="controlgroup" data-corners="false" class="ui-controlgroup ui-controlgroup-vertical">
+					<div class="ui-controlgroup-controls">
+						<a href="home.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all ui-first-child" role="button"><i
+								class="fa fa-home"></i> Home</a>
+						<a href="connections.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-link"></i> My Connections
+							<span class="nav-numeric">(xx)</span>
+						</a>
+						<a href="database.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-database"></i> Industry Database
+							<span class="nav-numeric">(xx)</span>
+						</a>
+						<a href="events.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button">
+							<img src="images/Icons-in-Black-02.svg" width="30" /> Events / Planning <span
+								class="nav-numeric">(xx)</span>
+						</a>
+						<a href="networking-members.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button">
+							<img src="images/Icons-in-Black-04.svg" width="30" />Industry Network 
+							<span class="nav-numeric">(xx)</span>
+						</a>
+						<a href="marketplace.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button">
+							<img src="images/Icons-in-Black-03.svg" width="30" /> Marketplace
+							<span class="nav-numeric">(xx)</span>
+						</a>
+						<a href="crm-contacts.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-address-card"></i> Biz Dev
+							<span class="">Contacts <span class="nav-numeric">(xx)</span></span>
+						</a>
+						<a href="crm-pipeline.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button">
+							<img src="images/Icons-in-Black-01.svg" width="30" /> Biz Dev
+							<span class="">Pipeline <span class="nav-numeric">(xx)</span></span>
+						</a>
+						<a href="industry-news.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-newspaper-o"></i> Industry News
+							<span class="nav-numeric">(xx)</span>
+						</a>
+						<a href="industry-team-news.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-file-text"></i> News From Our Team
+							<span class="nav-numeric">(xx)</span>
+						</a>
+						<a href="networking-group-page.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-user"></i> My Profile</a>
+						<a href="pricing.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-tags"></i> Pricing</a>
+						<a href="login.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-sign-in"></i> Login</a>
+						<a href="signup.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-sign-out"></i> Signup</a>
+						<a href="#" rel="external" data-role="button"
+							class="text-center ui-link ui-shadow ui-corner-all ui-last-child">
+							Version (xx)</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="header" data-role="header" data-theme="b" role="banner" class="ui-header ui-bar-b main-header-two">
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="text-left com-logo">
+						<img src="images/logo.png" class="logo" />
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<a id="bars-button" data-icon="bars"
+						class="ui-btn-right ui-link ui-btn ui-btn-icon-left ui-shadow ui-corner-all menu-bars-btn menu-btn"
+						href="#navpanel" data-role="button" role="button"><i class="fa fa-bars"></i></a>
+				</div>
+			</div>
+			<!-- /grid-a -->
+		</div>
+
+		<div data-role="main" class="ui-content ui-content-comp bg-gray-4">
+			<div class="top-marginer"></div>
+
+			<div data-role="content">
+				<div class="home-user-profile home-user-profile-only-btn mx-1">
+					<div class="d-flex">
+						<div class="col npad form-pad-1">
+							<a id="myDashboard" href="javascript:void(0);" data-transition="slide"
+								class="ui-btn ui-icon-bars ui-btn-icon-left ui-shadow-icon ui-btn-b view-prof-btn app-bg">My
+								Dashboard</a>
+						</div>
+						<div class="col npad form-pad-2">
+							<button type="button" onclick="location.href='meeting-manager.html'"
+								class="ui-btn ui-icon-action ui-btn-icon-left ui-shadow-icon ui-btn-b view-prof-btn app-bg">Meeting
+								Manager</button>
+						</div>
+					</div>
+				</div>
+				<div class="pricing crm crm-pipeline meeting-requests">
+					<div class="px-1 crm-title-comp app-bg back-btn-cont d-flex justify-content-between align-items-center">
+						<button onclick="window.history.go(-1)" href="javascript:void(0);" type="button" class="main-page-header-back-btn btn-back btn--round ui-btn ui-btn-b ui-icon-arrow-l ui-btn-icon-left ui-shadow ui-corner-all btn-rounded-circle">
+							Back
+						</button>
+						<h4 class="text-center page-main-heading nmarg pad-10">
+							<b>Meeting Requests </b>
+						</h4>
+						<i class="text-white fa fa-question-circle" data-toggle="popover" data-placement="bottom" data-content="" data-trigger="hover" data-original-title="Biz Dev Contacts"></i>
+					</div>
+
+					<div class="crm-contacts-comp">
+						<div data-role="tabs" id="tabs">
+							<div data-role="navbar">
+								<ul>
+									<li>
+										<a href="#one" data-ajax="false"
+											class="ui-link ui-btn ui-tabs-anchor ui-btn-active">Confirmed Meeting
+											Requests (xx)</a>
+									</li>
+									<li>
+										<a href="#two" data-ajax="false">Pending Meeting Requests (xx)</a>
+									</li>
+								</ul>
+							</div>
+							<div id="one" class="ui-body-d ui-content">
+								<br />
+								<p class="text-right">
+									<a href="book-meet-up.html" rel="external"> My Calendar </a>
+								</p>
+
+								<div class="crm-pipeline-list">
+									<ul data-role="listview" data-split-icon="carat-d" data-inset="true">
+										<li>
+											<a href="javascript:void(0);"
+												class="crm-pipeline-tile meeting-request-tile">
+												<img src="images/user-pic-5.jpg"
+													class="ui-li-thumb crm-pipeline-avatar rounded-img" />
+												<h2 onclick="window.location.href='networking-group-page.html'"
+													class="meeting-with">
+													John Doe
+												</h2>
+												<p class="meeting-event-title">Events-title</p>
+												<p class="meeting-details">
+													Orem Ipsum is simply dummy text of the printing and
+													typesetting industry. Lorem Ipsum has been the
+													industry's standard dummy text ever since the 1500s.
+												</p>
+												<div class="company-profile-page">
+													<div class="company-relations-btns">
+														<fieldset class="">
+															<div class="btn-block-comp">
+																<button
+																	class="ui-btn ui-corner-all ui-btn-icon-left connected bg-app"
+																	data-toggle="modal"
+																	data-target="#cancelMeetingModal">
+																	Cancel Meetup
+																</button>
+															</div>
+														</fieldset>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);"
+												class="crm-pipeline-tile meeting-request-tile">
+												<img src="images/user-pic-5.jpg"
+													class="ui-li-thumb crm-pipeline-avatar rounded-img" />
+												<h2 onclick="window.location.href='networking-group-page.html'"
+													class="meeting-with">
+													John Doe
+												</h2>
+												<p class="meeting-event-title">Events-title</p>
+												<p class="meeting-details">
+													Orem Ipsum is simply dummy text of the printing and
+													typesetting industry. Lorem Ipsum has been the
+													industry's standard dummy text ever since the 1500s.
+												</p>
+												<div class="company-profile-page">
+													<div class="company-relations-btns">
+														<fieldset class="">
+															<div class="btn-block-comp">
+																<button
+																	class="ui-btn ui-corner-all ui-btn-icon-left connected bg-app"
+																	data-toggle="modal"
+																	data-target="#cancelMeetingModal">
+																	Cancel Meetup
+																</button>
+															</div>
+														</fieldset>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);"
+												class="crm-pipeline-tile meeting-request-tile">
+												<img src="images/user-pic-5.jpg"
+													class="ui-li-thumb crm-pipeline-avatar rounded-img" />
+												<h2 onclick="window.location.href='networking-group-page.html'"
+													class="meeting-with">
+													John Doe
+												</h2>
+												<p class="meeting-event-title">Events-title</p>
+												<p class="meeting-details">
+													Orem Ipsum is simply dummy text of the printing and
+													typesetting industry. Lorem Ipsum has been the
+													industry's standard dummy text ever since the 1500s.
+												</p>
+												<div class="company-profile-page">
+													<div class="company-relations-btns">
+														<fieldset class="">
+															<div class="btn-block-comp">
+																<button
+																	class="ui-btn ui-corner-all ui-btn-icon-left connected bg-app"
+																	data-toggle="modal"
+																	data-target="#cancelMeetingModal">
+																	Cancel Meetup
+																</button>
+															</div>
+														</fieldset>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div id="two" class="ui-body-d ui-content">
+								<br />
+								<p class="text-right">
+									<a href="book-meet-up.html" rel="external"> My Calendar </a>
+								</p>
+
+								<div class="crm-pipeline-list">
+									<ul data-role="listview" data-split-icon="carat-d" data-inset="true">
+										<li>
+											<a href="javascript:void(0);"
+												class="crm-pipeline-tile meeting-request-tile">
+												<img src="images/user-pic-5.jpg"
+													class="ui-li-thumb crm-pipeline-avatar rounded-img" />
+												<h2 onclick="window.location.href='networking-group-page.html'"
+													class="meeting-with">
+													John Doe
+												</h2>
+												<p class="meeting-event-title">Events-title</p>
+												<p class="meeting-details">
+													Orem Ipsum is simply dummy text of the printing and
+													typesetting industry. Lorem Ipsum has been the
+													industry's standard dummy text ever since the 1500s.
+												</p>
+												<div class="company-profile-page">
+													<div class="company-relations-btns">
+														<fieldset class="ui-grid-b">
+															<div class="ui-block-a btn-block-comp">
+																<button
+																	class="ui-btn ui-corner-all ui-btn-icon-left connect"
+																	data-toggle="modal"
+																	data-target="#acceptMeetingModal">
+																	Accept
+																</button>
+															</div>
+															<div class="ui-block-b btn-block-comp">
+																<button
+																	class="ui-btn ui-corner-all ui-btn-icon-left pending"
+																	data-toggle="modal"
+																	data-target="#rescheduleMeetingModal">
+																	Reschedule
+																</button>
+															</div>
+															<div class="ui-block-c btn-block-comp">
+																<button
+																	class="ui-btn ui-corner-all ui-btn-icon-left connected"
+																	data-toggle="modal"
+																	data-target="#rejectMeetingModal">
+																	Reject
+																</button>
+															</div>
+														</fieldset>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);"
+												class="crm-pipeline-tile meeting-request-tile">
+												<img src="images/user-pic-5.jpg"
+													class="ui-li-thumb crm-pipeline-avatar rounded-img" />
+												<h2 onclick="window.location.href='networking-group-page.html'"
+													class="meeting-with">
+													John Doe
+												</h2>
+												<p class="meeting-event-title">Events-title</p>
+												<p class="meeting-details">
+													Orem Ipsum is simply dummy text of the printing and
+													typesetting industry. Lorem Ipsum has been the
+													industry's standard dummy text ever since the 1500s.
+												</p>
+												<div class="company-profile-page">
+													<div class="company-relations-btns">
+														<fieldset class="ui-grid-b">
+															<div class="ui-block-a btn-block-comp">
+																<button
+																	class="ui-btn ui-corner-all ui-btn-icon-left connect"
+																	data-toggle="modal"
+																	data-target="#acceptMeetingModal">
+																	Accept
+																</button>
+															</div>
+															<div class="ui-block-b btn-block-comp">
+																<button
+																	class="ui-btn ui-corner-all ui-btn-icon-left pending"
+																	data-toggle="modal"
+																	data-target="#rescheduleMeetingModal">
+																	Reschedule
+																</button>
+															</div>
+															<div class="ui-block-c btn-block-comp">
+																<button
+																	class="ui-btn ui-corner-all ui-btn-icon-left connected"
+																	data-toggle="modal"
+																	data-target="#rejectMeetingModal">
+																	Reject
+																</button>
+															</div>
+														</fieldset>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);"
+												class="crm-pipeline-tile meeting-request-tile">
+												<img src="images/user-pic-5.jpg"
+													class="ui-li-thumb crm-pipeline-avatar rounded-img" />
+												<h2 onclick="window.location.href='networking-group-page.html'"
+													class="meeting-with">
+													John Doe
+												</h2>
+												<p class="meeting-event-title">Events-title</p>
+												<p class="meeting-details">
+													Orem Ipsum is simply dummy text of the printing and
+													typesetting industry. Lorem Ipsum has been the
+													industry's standard dummy text ever since the 1500s.
+												</p>
+												<div class="company-profile-page">
+													<div class="company-relations-btns">
+														<fieldset class="ui-grid-b">
+															<div class="ui-block-a btn-block-comp">
+																<button
+																	class="ui-btn ui-corner-all ui-btn-icon-left connect"
+																	data-toggle="modal"
+																	data-target="#acceptMeetingModal">
+																	Accept
+																</button>
+															</div>
+															<div class="ui-block-b btn-block-comp">
+																<button
+																	class="ui-btn ui-corner-all ui-btn-icon-left pending"
+																	data-toggle="modal"
+																	data-target="#rescheduleMeetingModal">
+																	Reschedule
+																</button>
+															</div>
+															<div class="ui-block-c btn-block-comp">
+																<button
+																	class="ui-btn ui-corner-all ui-btn-icon-left connected"
+																	data-toggle="modal"
+																	data-target="#rejectMeetingModal">
+																	Reject
+																</button>
+															</div>
+														</fieldset>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div data-role="" data-position="fixed" role="contentinfo" class="ui-footer ui-bar-inherit ui-footer-fixed">
+			<div class="text-center footer-block">
+				<div class="ui-grid-c">
+					<div class="ui-block-a">
+						<div class="footer-btn-block">
+							<a href="home.html" rel="external" class="footer-link active">
+								<span class="footer-icon fa fa-home"></span><br /><span
+									class="footer-icon-text">Home</span>
+							</a>
+						</div>
+					</div>
+					<div class="ui-block-b">
+						<div class="footer-btn-block">
+							<a href="connections.html" rel="external" class="footer-link">
+								<span class="footer-icon fa fa-users"></span><span
+									class="footer-badge">90</span><br /><span class="footer-icon-text">My
+									Connections</span>
+							</a>
+						</div>
+					</div>
+					<div class="ui-block-c">
+						<div class="footer-btn-block">
+							<a href="meeting-manager.html" rel="external" class="footer-link">
+								<span class="footer-icon fa fa-calendar"></span><span
+									class="footer-badge">7</span><br /><span class="footer-icon-text">Meetings</span>
+							</a>
+						</div>
+					</div>
+					<div class="ui-block-d">
+						<div class="footer-btn-block">
+							<a href="messages.html" rel="external" class="footer-link">
+								<span class="footer-icon fa fa-envelope"></span><span
+									class="footer-badge">50</span><br /><span class="footer-icon-text">Messages</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Cancel meeting Modal -->
+	<div class="modal fade" id="cancelMeetingModal" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-overlay-theme="b" data-theme="b"
+		data-dismissible="false">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header" data-role="header" data-theme="a">
+					<a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal"
+						class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right close-dialog">Close</a>
+				</div>
+				<div class="modal-body">
+					<div role="main" class="ui-content">
+						<div class="text-center signup-form pad-10">
+							<h4>You are about to cancel this meetup</h4>
+						</div>
+						<div class="modal-footer npad">
+							<div class="ui-grid-a full-span">
+								<div class="text-left ui-block-a xs-pad">
+									<a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal"
+										class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b modal-no-btn">Cancel</a>
+								</div>
+								<div class="text-right ui-block-b xs-pad">
+									<a href="javascript:void(0);"
+										class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b app-bg app-clor modal-yes-btn">Accept</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- accept meeting Modal -->
+	<div class="modal fade" id="acceptMeetingModal" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-overlay-theme="b" data-theme="b"
+		data-dismissible="false">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header" data-role="header" data-theme="a">
+					<a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal"
+						class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right close-dialog">Close</a>
+				</div>
+				<div class="modal-body">
+					<div role="main" class="ui-content">
+						<div class="text-center signup-form pad-10">
+							<h4>Would you like to accept this meeting request?</h4>
+						</div>
+						<div class="modal-footer npad">
+							<div class="ui-grid-a full-span">
+								<div class="text-left ui-block-a xs-pad">
+									<a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal"
+										class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b modal-no-btn">Cancel</a>
+								</div>
+								<div class="text-right ui-block-b xs-pad">
+									<a href="javascript:void(0);"
+										class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b app-bg app-clor modal-yes-btn">Accept</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- reschedule meeting Modal -->
+	<div class="modal fade" id="rescheduleMeetingModal" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-overlay-theme="b" data-theme="b"
+		data-dismissible="false">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header" data-role="header" data-theme="a">
+					<a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal"
+						class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right close-dialog">Close</a>
+				</div>
+				<div class="modal-body">
+					<div role="main" class="ui-content">
+						<div class="text-center signup-form pad-10">
+							<h4>Would you like to reschedule this meeting?</h4>
+						</div>
+						<div class="modal-footer npad">
+							<div class="ui-grid-a full-span">
+								<div class="text-left ui-block-a xs-pad">
+									<a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal"
+										class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b modal-no-btn">Cancel</a>
+								</div>
+								<div class="text-right ui-block-b xs-pad">
+									<a href="javascript:void(0);"
+										class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b app-bg app-clor modal-yes-btn">Accept</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- reject meeting Modal -->
+	<div class="modal fade" id="rejectMeetingModal" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-overlay-theme="b" data-theme="b"
+		data-dismissible="false">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header" data-role="header" data-theme="a">
+					<a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal"
+						class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right close-dialog">Close</a>
+				</div>
+				<div class="modal-body">
+					<div role="main" class="ui-content">
+						<div class="text-center signup-form pad-10">
+							<h4>You are about to reject this meetup</h4>
+						</div>
+						<div class="modal-footer npad">
+							<div class="ui-grid-a full-span">
+								<div class="text-left ui-block-a xs-pad">
+									<a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal"
+										class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b modal-no-btn">Cancel</a>
+								</div>
+								<div class="text-right ui-block-b xs-pad">
+									<a href="javascript:void(0);"
+										class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b app-bg app-clor modal-yes-btn">Accept</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--
+	<script type="text/javascript" id="add_privacy_banner" src="http://www.cs.unibo.it/projects/privacy/js/add_privacy_banner_nocookie.js"></script>
+	<div style="font-family: arial; font-size: 12px; padding: 2px; width: 100%; z-index: 100; background: rgb(68, 68, 68) none repeat scroll 0% 0%; color: rgb(255, 255, 255);">
+	<a href="http://www.cs.unibo.it/projects/privacy/nocookie/privacy.pdf" style="color: white" target="_blank">Privacy Policy</a>
+	</div>
+	-->
+
+	<div id="mySidenav" class="sidenav">
+		<div class="mobile-sidebar-display home-left-sticky-component width---250px">
+			<div class="card border-light">
+				<div class="text-white card-header bg-red-extra d-flex align-items-center rounded-0">
+					<h6 class="text-center text-white card-title text-bold-600 text-capitalize w-100">
+						My Dashboard</h6>
+					<a href="javascript:void(0)" class="text-white closebtn" onclick="closeNav()">×</a>
+				</div>
+				<div class="user-info">
+					<div class="text-center user-name d-block">
+						<img class="rounded-circle avator" src="images/avatar-s-1.png" alt="">
+						<div class="text-center">
+							<h6>Holley Scott</h6>
+							<p class="mb-0">job_title</p>
+							<p class="mb-0">company_name</p>
+							<p class="mb-0">
+								<button href="javascript:void();" class="my-1 text-white btn btn-sm btn-danger-2">
+									<small>
+										<b>Upgrade Free Account</b>
+									</small>
+								</button>
+							</p>
+						</div>
+					</div>
+
+					<ul class="text-truncate pl-25 sidebar-ul-border list-unstyled">
+						<li><img src="images/Icons-in-Black-23.svg" width="35" alt="">
+							<a href="meeting-manager.html">Meetings
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span>
+							</a>
+
+						</li>
+						<li><img src="images/Icons-in-Black-24.svg" width="35" alt=""><a
+								href="meeting-requests.html">Meetup
+								requests <span
+									class="badge badge-secondary badge-red-extra mb-25 pull-right">xx</span></a>
+						</li>
+						<li><i class="fa fa-inbox"></i><a href="messages.html">Messages
+								<span class="badge badge-secondary badge-outline-secondary pull-right">xx</span></a>
+						</li>
+						<li><i class="fa fa-bell"></i><a href="notifications.html">Notifications
+								<span class="badge badge-secondary badge-red-extra mb-25 pull-right">xx</span></a>
+						</li>
+						<li>
+							<img src="images/Task-black-01.svg" width="35" alt="">&nbsp;
+							<a href="my-notes-and-events.html">
+								My Tasks &amp; Notes
+								<span class="badge badge-outline-secondary mb-25 pull-right">
+									xx
+								</span>
+							</a>
+						</li>
+					</ul>
+					<ul class="text-truncate pl-25 sidebar-ul-border list-unstyled">
+						<li><img src="images/Icons-in-Black-02.svg" width="35" alt=""><a href="my-events.html">My
+								Events
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span>
+							</a>
+						</li>
+						<li><i class="fa fa-calendar"></i><a href="my-calendar.html">My
+								Calendar</a>
+						</li>
+					</ul>
+					<ul class="text-truncate pl-25 sidebar-ul-border">
+						<li><img src="images/Icons-in-Black-11.svg" width="35" alt=""><a href="connections.html">My
+								Connections
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span></a>
+						</li>
+						<li><i class="fa fa-user-plus"></i><a href="connection-requests.html">Connection Requests
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span></a>
+						</li>
+						<li><i class="fa fa-rss-square"></i><a href="following.html">Following
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span></a>
+						</li>
+						<li><img src="images/Icons-in-Black-09.svg" width="35" alt=""><a href="followers.html">Followers
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span></a>
+						</li>
+						<li><img src="images/Icons-in-Black-04.svg" width="35" alt=""><a
+                                href="who-is-online.html">Who's
+                                Online
+                                <span class="badge badge-outline-secondary pull-right mt-25">xx</span></a>
+                        </li>
+					</ul>
+					<ul class="text-truncate pl-25 sidebar-ul-border">
+						<li><img src="images/Icons-in-Black-12.svg" width="35" alt=""><a href="my-profile-views.html">My
+								Profile Views
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span></a>
+						</li>
+						<li><img src="images/Icons-in-Black-12.svg" width="35" alt=""><a href="my-opportunity.html">My
+								Opportunity...
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span></a>
+						</li>
+					</ul>
+					<ul class="text-truncate pl-25 sidebar-ul-border">
+						<li><i class="fa fa-database"></i><a href="company-bookmarks.html">Company
+								Bookmarks</a></li>
+						<li><i class="fa fa-user-circle"></i><a href="edit-profile.html">Update
+								Profile</a></li>
+						<li><img src="images/Contacts.svg" width="35" alt=""><a href="contact-us.html">Contact Us</a>
+						</li>
+						<li><img src="javascript:void(0);" width="35" alt=""><a href="imprint.html">Imprint/ Terms</a>
+						</li>
+					</ul>
+					<img src="images/logo-1.png" alt="" class="pt-2 img-fluid pb-25">
+					<img src="images/logo-33.png" alt="" class="pb-2 img-fluid last--logo">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/dashboard.js"></script>
+
+	<div class="ui-loader ui-corner-all ui-body-a ui-loader-default">
+		<span class="ui-icon-loading"></span>
+		<h1>loading</h1>
+	</div>
+	<script>
+		$(window).on("load", function () {
+			$(".sub-page-header-btn").trigger("click");
+		});
+
+		// tell the embed parent frame the height of the content
+		if (window.parent && window.parent.parent) {
+			window.parent.parent.postMessage(
+				[
+					"resultsFrame",
+					{
+						height: document.body.getBoundingClientRect().height,
+						slug: "3Lqhov14",
+					},
+				],
+				"*"
+			);
+		}
+
+		// always overwrite window.name, in case users try to set it manually
+		window.name = "result";
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html class="ui-mobile">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+	<title>GIN APP</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="Font-Awesome-4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/css.css" />
+	<script src="bootstrap/js/jquery.min.js"></script>
+	<script src="bootstrap/js/popper.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="bootstrap/js/jquery-1.11.3.min.js"></script>
+	<script src="jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+
+	<!-- TODO: Missing CoffeeScript 2 -->
+	<script type="text/javascript">
+		//<![CDATA[
+		$(window).load(function () {
+			var activePage = $.mobile.pageContainer.pagecontainer("getActivePage"),
+				screen = $.mobile.getScreenHeight(),
+				header = $(".ui-header", activePage).hasClass("ui-header-fixed") ?
+				$(".ui-header", activePage).outerHeight() - 1 :
+				$(".ui-header", activePage).outerHeight(),
+				footer = $(".ui-footer", activePage).hasClass("ui-footer-fixed") ?
+				$(".ui-footer", activePage).outerHeight() - 1 :
+				$(".ui-footer", activePage).outerHeight(),
+				panelheight = screen - header - footer;
+			$(".ui-panel").css({
+				top: header,
+				"min-height": panelheight,
+			});
+		});
+		//]]>
+	</script>
+</head>
+
+<body class="ui-mobile-viewport ui-overlay-a">
+	<div data-role="page" id="pageone" data-url="pageone" tabindex="0"
+		class="ui-page ui-page-theme-a ui-page-footer-fixed ui-page-active">
+		<div data-role="panel" id="navpanel" data-theme="a" data-display="overlay" data-position="right"
+			data-position-fixed="true"
+			class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-panel-closed ui-body-a ui-panel-animate">
+			<div class="ui-panel-inner">
+				<div data-role="controlgroup" data-corners="false" class="ui-controlgroup ui-controlgroup-vertical">
+					<div class="ui-controlgroup-controls">
+						<a href="home.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all ui-first-child" role="button"><i
+								class="fa fa-home"></i> Home</a>
+						<a href="connections.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-link"></i> My Connections
+							<span class="nav-numeric">(xx)</span>
+						</a>
+						<a href="database.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-database"></i> Industry Database
+							<span class="nav-numeric">(xx)</span>
+						</a>
+						<a href="events.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button">
+							<img src="images/Icons-in-Black-02.svg" width="30" /> Events / Planning <span
+								class="nav-numeric">(xx)</span>
+						</a>
+						<a href="networking-members.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button">
+							<img src="images/Icons-in-Black-04.svg" width="30" />Industry Network 
+							<span class="nav-numeric">(xx)</span>
+						</a>
+						<a href="marketplace.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button">
+							<img src="images/Icons-in-Black-03.svg" width="30" /> Marketplace
+							<span class="nav-numeric">(xx)</span>
+						</a>
+						<a href="crm-contacts.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-address-card"></i> Biz Dev
+							<span class="">Contacts <span class="nav-numeric">(xx)</span></span>
+						</a>
+						<a href="crm-pipeline.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button">
+							<img src="images/Icons-in-Black-01.svg" width="30" /> Biz Dev
+							<span class="">Pipeline <span class="nav-numeric">(xx)</span></span>
+						</a>
+						<a href="industry-news.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-newspaper-o"></i> Industry News
+							<span class="nav-numeric">(xx)</span>
+						</a>
+						<a href="industry-team-news.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-file-text"></i> News From Our Team
+							<span class="nav-numeric">(xx)</span>
+						</a>
+						<a href="networking-group-page.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-user"></i> My Profile</a>
+						<a href="pricing.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-tags"></i> Pricing</a>
+						<a href="login.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-sign-in"></i> Login</a>
+						<a href="signup.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-sign-out"></i> Signup</a>
+						<a href="#" rel="external" data-role="button"
+							class="text-center ui-link ui-shadow ui-corner-all ui-last-child">
+							Version (xx)</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="header" data-role="header" data-theme="b" role="banner" class="ui-header ui-bar-b main-header-two">
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="text-left com-logo">
+						<img src="images/logo.png" class="logo" />
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<a id="bars-button" data-icon="bars"
+						class="ui-btn-right ui-link ui-btn ui-btn-icon-left ui-shadow ui-corner-all menu-bars-btn menu-btn"
+						href="#navpanel" data-role="button" role="button"><i class="fa fa-bars"></i></a>
+				</div>
+			</div>
+			<!-- /grid-a -->
+		</div>
+
+		<div data-role="main" class="ui-content ui-content-comp bg-gray-4">
+			<div class="top-marginer"></div>
+
+			<div data-role="content">
+				<div class="home-user-profile home-user-profile-only-btn mx-1">
+					<div class="d-flex">
+						<div class="col npad form-pad-1">
+							<a id="myDashboard" href="javascript:void(0);" data-transition="slide"
+								class="ui-btn ui-icon-bars ui-btn-icon-left ui-shadow-icon ui-btn-b view-prof-btn app-bg">My
+								Dashboard</a>
+						</div>
+						<div class="col npad form-pad-2">
+							<button type="button" onclick="location.href='meeting-manager.html'"
+								class="ui-btn ui-icon-action ui-btn-icon-left ui-shadow-icon ui-btn-b view-prof-btn app-bg">Meeting
+								Manager</button>
+						</div>
+					</div>
+				</div>
+				<div class="networking-members events-page company-database">
+					<div class="px-1 crm-title-comp app-bg back-btn-cont d-flex justify-content-between align-items-center">
+						<button onclick="window.history.go(-1)" href="javascript:void(0);" type="button" class="main-page-header-back-btn btn-back btn--round ui-btn ui-btn-b ui-icon-arrow-l ui-btn-icon-left ui-shadow ui-corner-all btn-rounded-circle">
+							Back
+						</button>
+						<h4 class="text-center page-main-heading nmarg pad-10">
+							<b>Industry Network </b>
+						</h4>
+						<i class="text-white fa fa-question-circle" data-toggle="popover" data-placement="bottom" data-content="" data-trigger="hover" data-original-title="Biz Dev Contacts"></i>
+					</div>
+
+					<div class="comp-header comp-header-1 search-header search-header-company">
+						<!-- <div class="pb-1">
+								<select name="select-1" id="select">
+									<option value="16gb">SELECT EVENTS</option>
+									<option value="32gb">EVENTS #1</option>
+									<option value="64gb">EVENTS #2</option>
+									<option value="128gb">EVENTS #3</option>
+								</select>
+							</div> -->
+
+						<div class="py-1 w-100 position-relative">
+							<a class="text-dark ui-link" data-toggle="collapse" href="#db-info-littlo" role="button"
+								aria-expanded="true" aria-controls="db-info-littlo">
+								<i class="fa fa-times-circle position-absolute db-info-close"></i>
+							</a>
+
+							<p class="pb-0 collapse show" id="db-info-littlo">
+								Find, connect, message, follow, suggest meetings and add your business development list
+								and pipeline
+							</p>
+						</div>
+
+						<div class="database-search-options-collapsible">
+							<div data-role="tabs">
+								<div data-role="navbar">
+									<ul>
+										<li>
+											<a data-toggle="collapse" href="#fragment3">Search</a>
+										</li>
+										<li>
+											<a id="adSearch2" href="#fragment4">Advanced Search</a>
+										</li>
+									</ul>
+								</div>
+								<div id="fragment3" class="collapse collapsed-tab">
+									<div class="simple-search">
+										<div class="row">
+											<div class="col-8 database-name-search-col">
+												<div class="block-form-group">
+													<label for="name">Name search</label><br />
+													<input type="text" name="name" id="myFilter"
+														placeholder="Enter search word" />
+												</div>
+											</div>
+											<div class="col-3 npad">
+												<br />
+												<div id="custom-border-radius"
+													class="text-left search-crm-red-btn-comp">
+													<a href="#"
+														class="ui-btn ui-icon-search ui-btn-icon-notext ui-corner-all ui-shadow search-btn search-crm-red-btn"></a>
+												</div>
+											</div>
+											<div class="col-1"></div>
+										</div>
+									</div>
+								</div>
+								<div id="fragment4">
+									<div id="advancedSearch" class="advanced-search">
+										<div class="industry-database-search-hdg">
+											<p class="search-form-heading">
+												<b> Refine search with dropdowns and keywords </b>
+											</p>
+										</div>
+
+										<div class="comp-header comp-header-1 search-header">
+											<div class="ui-grid-a">
+												<div class="ui-block-a">
+													<div class="block-form-group">
+														<label for="name">Name</label><br />
+														<input type="text" name="name" placeholder="Name" />
+													</div>
+												</div>
+												<div class="ui-block-b">
+													<div class="block-form-group">
+														<label for="company">Company</label><br />
+														<input type="text" name="name" placeholder="Company" />
+													</div>
+												</div>
+											</div>
+											<div class="ui-grid-a">
+												<div class="ui-block-a">
+													<div class="block-form-group">
+														<label for="job-title">Job Title</label><br />
+														<input type="text" name="name" placeholder="Job Title" />
+													</div>
+												</div>
+												<div class="ui-block-b">
+													<div class="block-form-group">
+														<label for="professional-interests">
+															Country </label><br />
+														<select id="" name="">
+															<option value="">Select Country</option>
+															<option value="Afghanistan">Afghanistan</option>
+															<option value="Åland Islands">
+																Åland Islands
+															</option>
+															<option value="Albania">Albania</option>
+															<option value="Algeria">Algeria</option>
+															<option value="American Samoa">
+																American Samoa
+															</option>
+															<option value="Andorra">Andorra</option>
+															<option value="Angola">Angola</option>
+															<option value="Anguilla">Anguilla</option>
+															<option value="Antarctica">Antarctica</option>
+															<option value="Antigua and Barbuda">
+																Antigua and Barbuda
+															</option>
+															<option value="Argentina">Argentina</option>
+															<option value="Armenia">Armenia</option>
+															<option value="Aruba">Aruba</option>
+															<option value="Australia">Australia</option>
+															<option value="Austria">Austria</option>
+															<option value="Azerbaijan">Azerbaijan</option>
+															<option value="Bahamas">Bahamas</option>
+															<option value="Bahrain">Bahrain</option>
+															<option value="Bangladesh">Bangladesh</option>
+															<option value="Barbados">Barbados</option>
+															<option value="Belarus">Belarus</option>
+															<option value="Belgium">Belgium</option>
+															<option value="Belize">Belize</option>
+															<option value="Benin">Benin</option>
+															<option value="Bermuda">Bermuda</option>
+															<option value="Bhutan">Bhutan</option>
+															<option value="Bolivia">Bolivia</option>
+															<option value="Bosnia and Herzegovina">
+																Bosnia and Herzegovina
+															</option>
+															<option value="Botswana">Botswana</option>
+															<option value="Bouvet Island">
+																Bouvet Island
+															</option>
+															<option value="Brazil">Brazil</option>
+															<option value="British Indian Ocean Territory">
+																British Indian Ocean Territory
+															</option>
+															<option value="Brunei Darussalam">
+																Brunei Darussalam
+															</option>
+															<option value="Bulgaria">Bulgaria</option>
+															<option value="Burkina Faso">
+																Burkina Faso
+															</option>
+															<option value="Burundi">Burundi</option>
+															<option value="Cambodia">Cambodia</option>
+															<option value="Cameroon">Cameroon</option>
+															<option value="Canada">Canada</option>
+															<option value="Cape Verde">Cape Verde</option>
+															<option value="Cayman Islands">
+																Cayman Islands
+															</option>
+															<option value="Central African Republic">
+																Central African Republic
+															</option>
+															<option value="Chad">Chad</option>
+															<option value="Chile">Chile</option>
+															<option value="China">China</option>
+															<option value="Christmas Island">
+																Christmas Island
+															</option>
+															<option value="Cocos (Keeling) Islands">
+																Cocos (Keeling) Islands
+															</option>
+															<option value="Colombia">Colombia</option>
+															<option value="Comoros">Comoros</option>
+															<option value="Congo">Congo</option>
+															<option value="Congo, The Democratic Republic of The">
+																Congo, The Democratic Republic of The
+															</option>
+															<option value="Cook Islands">
+																Cook Islands
+															</option>
+															<option value="Costa Rica">Costa Rica</option>
+															<option value="Cote D'ivoire">
+																Cote D'ivoire
+															</option>
+															<option value="Croatia">Croatia</option>
+															<option value="Cuba">Cuba</option>
+															<option value="Cyprus">Cyprus</option>
+															<option value="Czech Republic">
+																Czech Republic
+															</option>
+															<option value="Denmark">Denmark</option>
+															<option value="Djibouti">Djibouti</option>
+															<option value="Dominica">Dominica</option>
+															<option value="Dominican Republic">
+																Dominican Republic
+															</option>
+															<option value="Ecuador">Ecuador</option>
+															<option value="Egypt">Egypt</option>
+															<option value="El Salvador">El Salvador</option>
+															<option value="Equatorial Guinea">
+																Equatorial Guinea
+															</option>
+															<option value="Eritrea">Eritrea</option>
+															<option value="Estonia">Estonia</option>
+															<option value="Ethiopia">Ethiopia</option>
+															<option value="Falkland Islands (Malvinas)">
+																Falkland Islands (Malvinas)
+															</option>
+															<option value="Faroe Islands">
+																Faroe Islands
+															</option>
+															<option value="Fiji">Fiji</option>
+															<option value="Finland">Finland</option>
+															<option value="France">France</option>
+															<option value="French Guiana">
+																French Guiana
+															</option>
+															<option value="French Polynesia">
+																French Polynesia
+															</option>
+															<option value="French Southern Territories">
+																French Southern Territories
+															</option>
+															<option value="Gabon">Gabon</option>
+															<option value="Gambia">Gambia</option>
+															<option value="Georgia">Georgia</option>
+															<option value="Germany">Germany</option>
+															<option value="Ghana">Ghana</option>
+															<option value="Gibraltar">Gibraltar</option>
+															<option value="Greece">Greece</option>
+															<option value="Greenland">Greenland</option>
+															<option value="Grenada">Grenada</option>
+															<option value="Guadeloupe">Guadeloupe</option>
+															<option value="Guam">Guam</option>
+															<option value="Guatemala">Guatemala</option>
+															<option value="Guernsey">Guernsey</option>
+															<option value="Guinea">Guinea</option>
+															<option value="Guinea-bissau">
+																Guinea-bissau
+															</option>
+															<option value="Guyana">Guyana</option>
+															<option value="Haiti">Haiti</option>
+															<option value="Heard Island and Mcdonald Islands">
+																Heard Island and Mcdonald Islands
+															</option>
+															<option value="Holy See (Vatican City State)">
+																Holy See (Vatican City State)
+															</option>
+															<option value="Honduras">Honduras</option>
+															<option value="Hong Kong">Hong Kong</option>
+															<option value="Hungary">Hungary</option>
+															<option value="Iceland">Iceland</option>
+															<option value="India">India</option>
+															<option value="Indonesia">Indonesia</option>
+															<option value="Iran, Islamic Republic of">
+																Iran, Islamic Republic of
+															</option>
+															<option value="Iraq">Iraq</option>
+															<option value="Ireland">Ireland</option>
+															<option value="Isle of Man">Isle of Man</option>
+															<option value="Israel">Israel</option>
+															<option value="Italy">Italy</option>
+															<option value="Jamaica">Jamaica</option>
+															<option value="Japan">Japan</option>
+															<option value="Jersey">Jersey</option>
+															<option value="Jordan">Jordan</option>
+															<option value="Kazakhstan">Kazakhstan</option>
+															<option value="Kenya">Kenya</option>
+															<option value="Kiribati">Kiribati</option>
+															<option value="Korea, Democratic People's Republic of">
+																Korea, Democratic People's Republic of
+															</option>
+															<option value="Korea, Republic of">
+																Korea, Republic of
+															</option>
+															<option value="Kuwait">Kuwait</option>
+															<option value="Kyrgyzstan">Kyrgyzstan</option>
+															<option value="Lao People's Democratic Republic">
+																Lao People's Democratic Republic
+															</option>
+															<option value="Latvia">Latvia</option>
+															<option value="Lebanon">Lebanon</option>
+															<option value="Lesotho">Lesotho</option>
+															<option value="Liberia">Liberia</option>
+															<option value="Libyan Arab Jamahiriya">
+																Libyan Arab Jamahiriya
+															</option>
+															<option value="Liechtenstein">
+																Liechtenstein
+															</option>
+															<option value="Lithuania">Lithuania</option>
+															<option value="Luxembourg">Luxembourg</option>
+															<option value="Macao">Macao</option>
+															<option value="Macedonia, The Former Yugoslav Republic of">
+																Macedonia, The Former Yugoslav Republic of
+															</option>
+															<option value="Madagascar">Madagascar</option>
+															<option value="Malawi">Malawi</option>
+															<option value="Malaysia">Malaysia</option>
+															<option value="Maldives">Maldives</option>
+															<option value="Mali">Mali</option>
+															<option value="Malta">Malta</option>
+															<option value="Marshall Islands">
+																Marshall Islands
+															</option>
+															<option value="Martinique">Martinique</option>
+															<option value="Mauritania">Mauritania</option>
+															<option value="Mauritius">Mauritius</option>
+															<option value="Mayotte">Mayotte</option>
+															<option value="Mexico">Mexico</option>
+															<option value="Micronesia, Federated States of">
+																Micronesia, Federated States of
+															</option>
+															<option value="Moldova, Republic of">
+																Moldova, Republic of
+															</option>
+															<option value="Monaco">Monaco</option>
+															<option value="Mongolia">Mongolia</option>
+															<option value="Montenegro">Montenegro</option>
+															<option value="Montserrat">Montserrat</option>
+															<option value="Morocco">Morocco</option>
+															<option value="Mozambique">Mozambique</option>
+															<option value="Myanmar">Myanmar</option>
+															<option value="Namibia">Namibia</option>
+															<option value="Nauru">Nauru</option>
+															<option value="Nepal">Nepal</option>
+															<option value="Netherlands">Netherlands</option>
+															<option value="Netherlands Antilles">
+																Netherlands Antilles
+															</option>
+															<option value="New Caledonia">
+																New Caledonia
+															</option>
+															<option value="New Zealand">New Zealand</option>
+															<option value="Nicaragua">Nicaragua</option>
+															<option value="Niger">Niger</option>
+															<option value="Nigeria">Nigeria</option>
+															<option value="Niue">Niue</option>
+															<option value="Norfolk Island">
+																Norfolk Island
+															</option>
+															<option value="Northern Mariana Islands">
+																Northern Mariana Islands
+															</option>
+															<option value="Norway">Norway</option>
+															<option value="Oman">Oman</option>
+															<option value="Pakistan">Pakistan</option>
+															<option value="Palau">Palau</option>
+															<option value="Palestinian Territory, Occupied">
+																Palestinian Territory, Occupied
+															</option>
+															<option value="Panama">Panama</option>
+															<option value="Papua New Guinea">
+																Papua New Guinea
+															</option>
+															<option value="Paraguay">Paraguay</option>
+															<option value="Peru">Peru</option>
+															<option value="Philippines">Philippines</option>
+															<option value="Pitcairn">Pitcairn</option>
+															<option value="Poland">Poland</option>
+															<option value="Portugal">Portugal</option>
+															<option value="Puerto Rico">Puerto Rico</option>
+															<option value="Qatar">Qatar</option>
+															<option value="Reunion">Reunion</option>
+															<option value="Romania">Romania</option>
+															<option value="Russian Federation">
+																Russian Federation
+															</option>
+															<option value="Rwanda">Rwanda</option>
+															<option value="Saint Helena">
+																Saint Helena
+															</option>
+															<option value="Saint Kitts and Nevis">
+																Saint Kitts and Nevis
+															</option>
+															<option value="Saint Lucia">Saint Lucia</option>
+															<option value="Saint Pierre and Miquelon">
+																Saint Pierre and Miquelon
+															</option>
+															<option value="Saint Vincent and The Grenadines">
+																Saint Vincent and The Grenadines
+															</option>
+															<option value="Samoa">Samoa</option>
+															<option value="San Marino">San Marino</option>
+															<option value="Sao Tome and Principe">
+																Sao Tome and Principe
+															</option>
+															<option value="Saudi Arabia">
+																Saudi Arabia
+															</option>
+															<option value="Senegal">Senegal</option>
+															<option value="Serbia">Serbia</option>
+															<option value="Seychelles">Seychelles</option>
+															<option value="Sierra Leone">
+																Sierra Leone
+															</option>
+															<option value="Singapore">Singapore</option>
+															<option value="Slovakia">Slovakia</option>
+															<option value="Slovenia">Slovenia</option>
+															<option value="Solomon Islands">
+																Solomon Islands
+															</option>
+															<option value="Somalia">Somalia</option>
+															<option value="South Africa">
+																South Africa
+															</option>
+															<option
+																value="South Georgia and The South Sandwich Islands">
+																South Georgia and The South Sandwich Islands
+															</option>
+															<option value="Spain">Spain</option>
+															<option value="Sri Lanka">Sri Lanka</option>
+															<option value="Sudan">Sudan</option>
+															<option value="Suriname">Suriname</option>
+															<option value="Svalbard and Jan Mayen">
+																Svalbard and Jan Mayen
+															</option>
+															<option value="Swaziland">Swaziland</option>
+															<option value="Sweden">Sweden</option>
+															<option value="Switzerland">Switzerland</option>
+															<option value="Syrian Arab Republic">
+																Syrian Arab Republic
+															</option>
+															<option value="Taiwan, Province of China">
+																Taiwan, Province of China
+															</option>
+															<option value="Tajikistan">Tajikistan</option>
+															<option value="Tanzania, United Republic of">
+																Tanzania, United Republic of
+															</option>
+															<option value="Thailand">Thailand</option>
+															<option value="Timor-leste">Timor-leste</option>
+															<option value="Togo">Togo</option>
+															<option value="Tokelau">Tokelau</option>
+															<option value="Tonga">Tonga</option>
+															<option value="Trinidad and Tobago">
+																Trinidad and Tobago
+															</option>
+															<option value="Tunisia">Tunisia</option>
+															<option value="Turkey">Turkey</option>
+															<option value="Turkmenistan">
+																Turkmenistan
+															</option>
+															<option value="Turks and Caicos Islands">
+																Turks and Caicos Islands
+															</option>
+															<option value="Tuvalu">Tuvalu</option>
+															<option value="Uganda">Uganda</option>
+															<option value="Ukraine">Ukraine</option>
+															<option value="United Arab Emirates">
+																United Arab Emirates
+															</option>
+															<option value="United Kingdom">
+																United Kingdom
+															</option>
+															<option value="United States">
+																United States
+															</option>
+															<option value="United States Minor Outlying Islands">
+																United States Minor Outlying Islands
+															</option>
+															<option value="Uruguay">Uruguay</option>
+															<option value="Uzbekistan">Uzbekistan</option>
+															<option value="Vanuatu">Vanuatu</option>
+															<option value="Venezuela">Venezuela</option>
+															<option value="Viet Nam">Viet Nam</option>
+															<option value="Virgin Islands, British">
+																Virgin Islands, British
+															</option>
+															<option value="Virgin Islands, U.S.">
+																Virgin Islands, U.S.
+															</option>
+															<option value="Wallis and Futuna">
+																Wallis and Futuna
+															</option>
+															<option value="Western Sahara">
+																Western Sahara
+															</option>
+															<option value="Yemen">Yemen</option>
+															<option value="Zambia">Zambia</option>
+															<option value="Zimbabwe">Zimbabwe</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="ui-grid-a">
+												<div class="ui-block-a">
+													<div class="block-form-group">
+														<label for="professional-interests"> City </label><br />
+														<select name="" id="">
+															<option value="">Select</option>
+															<option value="">City 1</option>
+															<option value="">City 2</option>
+															<option value="">City 3</option>
+														</select>
+													</div>
+												</div>
+												<div class="ui-block-b">
+													<div class="block-form-group">
+														<label for="professional-interests">
+															Star Ratings </label><br />
+														<select name="" id="">
+															<option value="">Select Star Rating</option>
+															<option value="">0 Star</option>
+															<option value="">1 Star</option>
+															<option value="">2 Stars</option>
+															<option value="">3 Stars</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="">
+												<div class="text-left">
+													<a href="#"
+														class="ui-btn ui-corner-all ui-shadow search-btn search-crm-red-btn">View
+														Contacts by Event</a>
+												</div>
+											</div>
+
+											<!--
+									<div class="ui-grid-solo">
+									  <div class="ui-block-a">
+										<a href="#" class="ui-btn ui-corner-all ui-shadow search-btn search-crm-red-btn">Search</a>
+									  </div>
+									</div>
+									-->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<script>
+						$("#adSearch2").click(function () {
+							$("#fragment3").removeClass("show");
+						});
+					</script>
+
+					<div class="comp-header d-flex align-items-center justify-content-between">
+						<!-- <h4> Near You </h4> -->
+						<p class="search-results-comp">
+							Found: <span class="gray-text-2">(Number of results)</span>
+						</p>
+						<div class="btn-group btn-select-view" role="group" aria-label="Basic example">
+							<button type="button" onclick="location.href='networking-members-list.html'"
+								class="btn btn-secondary">
+								<svg id="SvgjsSvg1001" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+									version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+									xmlns:svgjs="http://svgjs.com/svgjs">
+									<defs id="SvgjsDefs1002"></defs>
+									<g id="SvgjsG1008" transform="matrix(1,0,0,1,0,0)"><svg
+											xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
+											height="20">
+											<g data-name="Layer 2" fill="#ffffff" class="color000 svgShape">
+												<g data-name="list" fill="#ffffff" class="color000 svgShape">
+													<rect width="24" height="24" opacity="0"
+														transform="rotate(180 12 12)" fill="#ffffff"
+														class="color000 svgShape"></rect>
+													<circle cx="4" cy="7" r="1" fill="#ffffff"
+														class="color000 svgShape"></circle>
+													<circle cx="4" cy="12" r="1" fill="#ffffff"
+														class="color000 svgShape"></circle>
+													<circle cx="4" cy="17" r="1" fill="#ffffff"
+														class="color000 svgShape"></circle>
+													<rect width="14" height="2" x="7" y="11" rx=".94" ry=".94"
+														fill="#ffffff" class="color000 svgShape">
+													</rect>
+													<rect width="14" height="2" x="7" y="16" rx=".94" ry=".94"
+														fill="#ffffff" class="color000 svgShape">
+													</rect>
+													<rect width="14" height="2" x="7" y="6" rx=".94" ry=".94"
+														fill="#ffffff" class="color000 svgShape">
+													</rect>
+												</g>
+											</g>
+										</svg></g>
+									&lt;0svg&gt;
+								</svg></button>
+							<button onclick="location.href='networking-members-square.html'" type="button"
+								class="btn btn-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+									viewBox="0 0 16 16">
+									<path fill="#fff"
+										d="M1.99994 4C1.99994 2.89543 2.89537 2 3.99994 2H11.9999C13.1045 2 13.9999 2.89543 13.9999 4V12C13.9999 13.1046 13.1045 14 11.9999 14H3.99994C2.89537 14 1.99994 13.1046 1.99994 12V4ZM3.99994 3C3.44765 3 2.99994 3.44772 2.99994 4V12C2.99994 12.5523 3.44765 13 3.99994 13H11.9999C12.5522 13 12.9999 12.5523 12.9999 12V4C12.9999 3.44772 12.5522 3 11.9999 3H3.99994Z">
+									</path>
+								</svg>
+							</button>
+							<button onclick="location.href='networking-members.html'" type="button" class="btn btn-secondary">
+								<!--?xml version="1.0" encoding="UTF-8"?-->
+								<svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="20"
+									height="20">
+									<path
+										d="M16,0H8A5,5,0,0,0,3,5V19a5,5,0,0,0,5,5h8a5,5,0,0,0,5-5V5A5,5,0,0,0,16,0Zm3,19a3,3,0,0,1-3,3H8a3,3,0,0,1-3-3V5A3,3,0,0,1,8,2h8a3,3,0,0,1,3,3Z"
+										fill="#ffffff"></path>
+								</svg>
+							</button>
+						</div>
+						<!-- <div class="simple-search simple-search-add-btn">
+							<div class="add-biz-comp add-network-contact">
+								<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true"
+									class="simple-search-add-user-btn">
+									<a href="#popupInfo" data-rel="popup" data-inline="true"
+										data-transition="pop"><button data-icon="plus" class="add-network-contact-btn">
+											Add
+										</button></a>
+									<div data-role="popup" id="popupInfo" class="ui-content unfriend-popup"
+										data-theme="d">
+										<a href="crm-contacts-create-individual.html" rel="external" class="msg-link"><i
+												class="fa fa-edit"></i> Create Contact</a>
+										<hr />
+										<a href="crm-contacts-upload-individual.html" rel="external"
+											class="unfriend-link"><i class="fa fa-upload"></i> Import Contacts</a>
+										<hr />
+									</div>
+								</fieldset>
+							</div>
+						</div> -->
+					</div>
+
+					<div class="pricing crm crm-contacts">
+						<div class="mt-0 crm-contacts-comp network-members-comp">
+							<div id="one" class="ui-body-d ui-content">
+								<div class="p-0 m-0 ui-grid-a">
+									<div class="w-100">
+										<div class="flex-wrap p-0 mx-1 crm-contacts-comp d-flex flex- bg-light">
+											<div onclick="location.href='networking-group-page.html'" class="p-1 w-100">
+												<div class="px-1 bg-white card profile-card-with-cover border-lighten-2 listed-conttt">
+                                                
+                                                        <div class="">
+                                                            <img src="images/avatar-s-1.png" class="rounded-circle img-border profileyPic" width="100" alt="Card image">
+                                                        </div>
+                                                        <div class="text-center profile-card-with-cover-content pt-75">
+                                                            <div class="px-1 card-body py-25">
+                                                                <h4 class="card-title mb-50 pb-25"><a href="profile.html" class="text-dark">Juliet
+                                                                        Kramer</a></h4>
+                                                                <h6 class="card-subtitle text-muted mb-50 pb-25">
+                                                                    (Biz Name)</h6>
+                                                                <a href="javascript:void(0);" class="badge badge-primary mb-25">Department</a>
+
+																<h6 class="mt-1 card-subtitle text-mutedmb-50 pb-25">(Title)
+																</h6>
+                                                
+                                                                <div class="justify-content-between align-items-center d-none d-md-flex">
+                                                                    <div class="d-flex red-diamond" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pontential">
+                                                                        <div class="p-25">
+                                                                            <img src="images/diamonds-05.svg" width="30" alt="" class="p-0 bg-transparent border-0 img-fluid">
+                                                                        </div>
+                                                                        <div class="p-25">
+                                                                            <img src="images/diamonds-05.svg" width="30" alt="" class="p-0 bg-transparent border-0 img-fluid">
+                                                                        </div>
+                                                                        <div class="p-25">
+                                                                            <img src="images/diamonds-03.svg" width="30" alt="" class="p-0 bg-transparent border-0 img-fluid">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                
+                                                        
+                                                
+                                                        <div>
+                                                
+                                                            <div class="connection-icons">
+                                                                <div class="border-0 socially-icons w--80px" data-toggle="tooltip" data-placement="top" title="" data-original-title="Connections">
+                                                                    <span onclick="location.href='user-connection.html'"><i class="fa fa-handshake-o fs-17 handshaky"></i>
+                                                                        (xx)</span>
+                                                                </div>
+                                                                <div class="border-0 socially-icons w--80px" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mutual Connections">
+                                                                    <a data-toggle="modal" data-target="#mutualConnections">
+                                                                        <i class="fa fa-link fs-17"></i> (xx)
+                                                                    </a>
+                                                                </div>
+                                                                <div class="border-0 socially-icons w--80px d-flex" data-toggle="tooltip" data-placement="top" title="" data-original-title="Follow">
+                                                                    <img src="images/Icons-in-Black-02.svg" width="25" alt=""> (xx)
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                
+                                                        <div>
+                                                
+                                                            <div class="my-50 h--110 position-relative">
+                                                            <button type="button"
+                                                                class="mx-auto my-0 btn btn-outline-message btn-sm btn-round pull-right mt-25 btn-100 btn-custom">
+                                                                <i class="fa fa-rss"></i> Follow
+                                                            </button>
+                                                            <button type="button" onclick="location.href='#'"
+                                                                class="mx-auto my-0 btn btn-sm btn-outline-message btn-round pull-right mt-25 btn-100 btn-custom"
+                                                                data-toggle="modal" data-target="#exampleModalCenter">
+                                                                <i class="fa fa-comment"></i> Message
+                                                            </button>
+                                                            <div
+                                                                class="right-0 justify-content-between align-items-center position-absolute bookmark--diamonds">
+                                                                <div class="d-flex red-diamond" data-toggle="tooltip"
+                                                                    data-placement="top" title=""
+                                                                    data-original-title="Pontential">
+                                                                    <div class="p-25">
+                                                                        <img src="images/diamonds-05.svg" width="30"
+                                                                            alt=""
+                                                                            class="p-0 bg-transparent border-0 img-fluid">
+                                                                    </div>
+                                                                    <div class="p-25">
+                                                                        <img src="images/diamonds-05.svg" width="30"
+                                                                            alt=""
+                                                                            class="p-0 bg-transparent border-0 img-fluid">
+                                                                    </div>
+                                                                    <div class="p-25">
+                                                                        <img src="images/diamonds-03.svg" width="30"
+                                                                            alt=""
+                                                                            class="p-0 bg-transparent border-0 img-fluid">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                
+                                                        <div class="row no-gutters w--40">
+															<button type="button" name="button" class="text-white p-25 p-md-0 btn bg-success listoo-btn">
+																<i class="border-0 fa fa-calendar bg-success-2 position-relative"></i>
+															</button>
+														
+															<button type="button" name="button" class="text-white p-25 p-md-0 btn btn-info listoo-btn">
+																<i class="border-0 fa fa-address-card position-relative"></i>
+															</button>
+                                                        </div>
+                                                    </div>
+											</div>
+
+											<div onclick="location.href='networking-group-page.html'" class="p-1 w-100">
+												<div class="px-1 bg-white card profile-card-with-cover border-lighten-2 listed-conttt">
+                                                
+                                                        <div class="">
+                                                            <img src="images/avatar-s-1.png" class="rounded-circle img-border profileyPic" width="100" alt="Card image">
+                                                        </div>
+                                                        <div class="text-center profile-card-with-cover-content pt-75">
+                                                            <div class="px-1 card-body py-25">
+                                                                <h4 class="card-title mb-50 pb-25"><a href="profile.html" class="text-dark">Juliet
+                                                                        Kramer</a></h4>
+                                                                <h6 class="card-subtitle text-muted mb-50 pb-25">
+                                                                    (Biz Name)</h6>
+                                                                <a href="javascript:void(0);" class="badge badge-primary mb-25">Department</a>
+
+																<h6 class="mt-1 card-subtitle text-mutedmb-50 pb-25">(Title)
+																</h6>
+                                                
+                                                                <div class="justify-content-between align-items-center d-none d-md-flex">
+                                                                    <div class="d-flex red-diamond" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pontential">
+                                                                        <div class="p-25">
+                                                                            <img src="images/diamonds-05.svg" width="30" alt="" class="p-0 bg-transparent border-0 img-fluid">
+                                                                        </div>
+                                                                        <div class="p-25">
+                                                                            <img src="images/diamonds-05.svg" width="30" alt="" class="p-0 bg-transparent border-0 img-fluid">
+                                                                        </div>
+                                                                        <div class="p-25">
+                                                                            <img src="images/diamonds-03.svg" width="30" alt="" class="p-0 bg-transparent border-0 img-fluid">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                
+                                                        
+                                                
+                                                        <div>
+                                                
+                                                            <div class="connection-icons">
+                                                                <div class="border-0 socially-icons w--80px" data-toggle="tooltip" data-placement="top" title="" data-original-title="Connections">
+                                                                    <span onclick="location.href='user-connection.html'"><i class="fa fa-handshake-o fs-17 handshaky"></i>
+                                                                        (xx)</span>
+                                                                </div>
+                                                                <div class="border-0 socially-icons w--80px" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mutual Connections">
+                                                                    <a data-toggle="modal" data-target="#mutualConnections">
+                                                                        <i class="fa fa-link fs-17"></i> (xx)
+                                                                    </a>
+                                                                </div>
+                                                                <div class="border-0 socially-icons w--80px d-flex" data-toggle="tooltip" data-placement="top" title="" data-original-title="Follow">
+                                                                    <img src="images/Icons-in-Black-02.svg" width="25" alt=""> (xx)
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                
+                                                        <div>
+                                                
+                                                            <div class="my-50 h--110 position-relative">
+                                                            <button type="button"
+                                                                class="mx-auto my-0 btn btn-outline-message btn-sm btn-round pull-right mt-25 btn-100 btn-custom">
+                                                                <i class="fa fa-rss"></i> Follow
+                                                            </button>
+                                                            <button type="button" onclick="location.href='#'"
+                                                                class="mx-auto my-0 btn btn-sm btn-outline-message btn-round pull-right mt-25 btn-100 btn-custom"
+                                                                data-toggle="modal" data-target="#exampleModalCenter">
+                                                                <i class="fa fa-comment"></i> Message
+                                                            </button>
+                                                            <div
+                                                                class="right-0 justify-content-between align-items-center position-absolute bookmark--diamonds">
+                                                                <div class="d-flex red-diamond" data-toggle="tooltip"
+                                                                    data-placement="top" title=""
+                                                                    data-original-title="Pontential">
+                                                                    <div class="p-25">
+                                                                        <img src="images/diamonds-05.svg" width="30"
+                                                                            alt=""
+                                                                            class="p-0 bg-transparent border-0 img-fluid">
+                                                                    </div>
+                                                                    <div class="p-25">
+                                                                        <img src="images/diamonds-05.svg" width="30"
+                                                                            alt=""
+                                                                            class="p-0 bg-transparent border-0 img-fluid">
+                                                                    </div>
+                                                                    <div class="p-25">
+                                                                        <img src="images/diamonds-03.svg" width="30"
+                                                                            alt=""
+                                                                            class="p-0 bg-transparent border-0 img-fluid">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                
+                                                        <div class="row no-gutters w--40">
+															<button type="button" name="button" class="text-white p-25 p-md-0 btn bg-success listoo-btn">
+																<i class="border-0 fa fa-calendar bg-success-2 position-relative"></i>
+															</button>
+														
+															<button type="button" name="button" class="text-white p-25 p-md-0 btn btn-info listoo-btn">
+																<i class="border-0 fa fa-address-card position-relative"></i>
+															</button>
+                                                        </div>
+                                                    </div>
+											</div>
+
+											<div onclick="location.href='networking-group-page.html'" class="p-1 w-100">
+												<div class="px-1 bg-white card profile-card-with-cover border-lighten-2 listed-conttt">
+                                                
+                                                        <div class="">
+                                                            <img src="images/avatar-s-1.png" class="rounded-circle img-border profileyPic" width="100" alt="Card image">
+                                                        </div>
+                                                        <div class="text-center profile-card-with-cover-content pt-75">
+                                                            <div class="px-1 card-body py-25">
+                                                                <h4 class="card-title mb-50 pb-25"><a href="profile.html" class="text-dark">Juliet
+                                                                        Kramer</a></h4>
+                                                                <h6 class="card-subtitle text-muted mb-50 pb-25">
+                                                                    (Biz Name)</h6>
+                                                                <a href="javascript:void(0);" class="badge badge-primary mb-25">Department</a>
+
+																<h6 class="mt-1 card-subtitle text-mutedmb-50 pb-25">(Title)
+																</h6>
+                                                
+                                                                <div class="justify-content-between align-items-center d-none d-md-flex">
+                                                                    <div class="d-flex red-diamond" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pontential">
+                                                                        <div class="p-25">
+                                                                            <img src="images/diamonds-05.svg" width="30" alt="" class="p-0 bg-transparent border-0 img-fluid">
+                                                                        </div>
+                                                                        <div class="p-25">
+                                                                            <img src="images/diamonds-05.svg" width="30" alt="" class="p-0 bg-transparent border-0 img-fluid">
+                                                                        </div>
+                                                                        <div class="p-25">
+                                                                            <img src="images/diamonds-03.svg" width="30" alt="" class="p-0 bg-transparent border-0 img-fluid">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                
+                                                        
+                                                
+                                                        <div>
+                                                
+                                                            <div class="connection-icons">
+                                                                <div class="border-0 socially-icons w--80px" data-toggle="tooltip" data-placement="top" title="" data-original-title="Connections">
+                                                                    <span onclick="location.href='user-connection.html'"><i class="fa fa-handshake-o fs-17 handshaky"></i>
+                                                                        (xx)</span>
+                                                                </div>
+                                                                <div class="border-0 socially-icons w--80px" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mutual Connections">
+                                                                    <a data-toggle="modal" data-target="#mutualConnections">
+                                                                        <i class="fa fa-link fs-17"></i> (xx)
+                                                                    </a>
+                                                                </div>
+                                                                <div class="border-0 socially-icons w--80px d-flex" data-toggle="tooltip" data-placement="top" title="" data-original-title="Follow">
+                                                                    <img src="images/Icons-in-Black-02.svg" width="25" alt=""> (xx)
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                
+                                                        <div>
+                                                
+                                                            <div class="my-50 h--110 position-relative">
+                                                            <button type="button"
+                                                                class="mx-auto my-0 btn btn-outline-message btn-sm btn-round pull-right mt-25 btn-100 btn-custom">
+                                                                <i class="fa fa-rss"></i> Follow
+                                                            </button>
+                                                            <button type="button" onclick="location.href='#'"
+                                                                class="mx-auto my-0 btn btn-sm btn-outline-message btn-round pull-right mt-25 btn-100 btn-custom"
+                                                                data-toggle="modal" data-target="#exampleModalCenter">
+                                                                <i class="fa fa-comment"></i> Message
+                                                            </button>
+                                                            <div
+                                                                class="right-0 justify-content-between align-items-center position-absolute bookmark--diamonds">
+                                                                <div class="d-flex red-diamond" data-toggle="tooltip"
+                                                                    data-placement="top" title=""
+                                                                    data-original-title="Pontential">
+                                                                    <div class="p-25">
+                                                                        <img src="images/diamonds-05.svg" width="30"
+                                                                            alt=""
+                                                                            class="p-0 bg-transparent border-0 img-fluid">
+                                                                    </div>
+                                                                    <div class="p-25">
+                                                                        <img src="images/diamonds-05.svg" width="30"
+                                                                            alt=""
+                                                                            class="p-0 bg-transparent border-0 img-fluid">
+                                                                    </div>
+                                                                    <div class="p-25">
+                                                                        <img src="images/diamonds-03.svg" width="30"
+                                                                            alt=""
+                                                                            class="p-0 bg-transparent border-0 img-fluid">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                
+                                                        <div class="row no-gutters w--40">
+															<button type="button" name="button" class="text-white p-25 p-md-0 btn bg-success listoo-btn">
+																<i class="border-0 fa fa-calendar bg-success-2 position-relative"></i>
+															</button>
+														
+															<button type="button" name="button" class="text-white p-25 p-md-0 btn btn-info listoo-btn">
+																<i class="border-0 fa fa-address-card position-relative"></i>
+															</button>
+                                                        </div>
+                                                    </div>
+											</div>
+
+											<div onclick="location.href='networking-group-page.html'" class="p-1 w-100">
+												<div class="px-1 bg-white card profile-card-with-cover border-lighten-2 listed-conttt">
+                                                
+                                                        <div class="">
+                                                            <img src="images/avatar-s-1.png" class="rounded-circle img-border profileyPic" width="100" alt="Card image">
+                                                        </div>
+                                                        <div class="text-center profile-card-with-cover-content pt-75">
+                                                            <div class="px-1 card-body py-25">
+                                                                <h4 class="card-title mb-50 pb-25"><a href="profile.html" class="text-dark">Juliet
+                                                                        Kramer</a></h4>
+                                                                <h6 class="card-subtitle text-muted mb-50 pb-25">
+                                                                    (Biz Name)</h6>
+                                                                <a href="javascript:void(0);" class="badge badge-primary mb-25">Department</a>
+
+																<h6 class="mt-1 card-subtitle text-mutedmb-50 pb-25">(Title)
+																</h6>
+                                                
+                                                                <div class="justify-content-between align-items-center d-none d-md-flex">
+                                                                    <div class="d-flex red-diamond" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pontential">
+                                                                        <div class="p-25">
+                                                                            <img src="images/diamonds-05.svg" width="30" alt="" class="p-0 bg-transparent border-0 img-fluid">
+                                                                        </div>
+                                                                        <div class="p-25">
+                                                                            <img src="images/diamonds-05.svg" width="30" alt="" class="p-0 bg-transparent border-0 img-fluid">
+                                                                        </div>
+                                                                        <div class="p-25">
+                                                                            <img src="images/diamonds-03.svg" width="30" alt="" class="p-0 bg-transparent border-0 img-fluid">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                
+                                                        
+                                                
+                                                        <div>
+                                                
+                                                            <div class="connection-icons">
+                                                                <div class="border-0 socially-icons w--80px" data-toggle="tooltip" data-placement="top" title="" data-original-title="Connections">
+                                                                    <span onclick="location.href='user-connection.html'"><i class="fa fa-handshake-o fs-17 handshaky"></i>
+                                                                        (xx)</span>
+                                                                </div>
+                                                                <div class="border-0 socially-icons w--80px" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mutual Connections">
+                                                                    <a data-toggle="modal" data-target="#mutualConnections">
+                                                                        <i class="fa fa-link fs-17"></i> (xx)
+                                                                    </a>
+                                                                </div>
+                                                                <div class="border-0 socially-icons w--80px d-flex" data-toggle="tooltip" data-placement="top" title="" data-original-title="Follow">
+                                                                    <img src="images/Icons-in-Black-02.svg" width="25" alt=""> (xx)
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                
+                                                        <div>
+                                                
+                                                            <div class="my-50 h--110 position-relative">
+                                                            <button type="button"
+                                                                class="mx-auto my-0 btn btn-outline-message btn-sm btn-round pull-right mt-25 btn-100 btn-custom">
+                                                                <i class="fa fa-rss"></i> Follow
+                                                            </button>
+                                                            <button type="button" onclick="location.href='#'"
+                                                                class="mx-auto my-0 btn btn-sm btn-outline-message btn-round pull-right mt-25 btn-100 btn-custom"
+                                                                data-toggle="modal" data-target="#exampleModalCenter">
+                                                                <i class="fa fa-comment"></i> Message
+                                                            </button>
+                                                            <div
+                                                                class="right-0 justify-content-between align-items-center position-absolute bookmark--diamonds">
+                                                                <div class="d-flex red-diamond" data-toggle="tooltip"
+                                                                    data-placement="top" title=""
+                                                                    data-original-title="Pontential">
+                                                                    <div class="p-25">
+                                                                        <img src="images/diamonds-05.svg" width="30"
+                                                                            alt=""
+                                                                            class="p-0 bg-transparent border-0 img-fluid">
+                                                                    </div>
+                                                                    <div class="p-25">
+                                                                        <img src="images/diamonds-05.svg" width="30"
+                                                                            alt=""
+                                                                            class="p-0 bg-transparent border-0 img-fluid">
+                                                                    </div>
+                                                                    <div class="p-25">
+                                                                        <img src="images/diamonds-03.svg" width="30"
+                                                                            alt=""
+                                                                            class="p-0 bg-transparent border-0 img-fluid">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                
+                                                        <div class="row no-gutters w--40">
+															<button type="button" name="button" class="text-white p-25 p-md-0 btn bg-success listoo-btn">
+																<i class="border-0 fa fa-calendar bg-success-2 position-relative"></i>
+															</button>
+														
+															<button type="button" name="button" class="text-white p-25 p-md-0 btn btn-info listoo-btn">
+																<i class="border-0 fa fa-address-card position-relative"></i>
+															</button>
+                                                        </div>
+                                                    </div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Send Message Modal -->
+		<div class="modal fade" id="sendMsgModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+			aria-hidden="true" data-overlay-theme="b" data-theme="b" data-dismissible="false">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header" data-role="header" data-theme="a">
+						<a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal"
+							class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right close-dialog">Close</a>
+						<span>Send message to: (Username)</span>
+					</div>
+					<div class="modal-body">
+						<div role="main" class="ui-content">
+							<div class="signup-form">
+								<form>
+									<div class="signup-form-group">
+										<textarea name="" id="" rows="5" class="app-textarea"
+											placeholder="Write your message..."></textarea>
+									</div>
+								</form>
+								<br />
+							</div>
+							<div class="modal-footer npad">
+								<div class="ui-grid-a full-span">
+									<div class="text-left ui-block-a xs-pad">
+										<a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal"
+											class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b modal-no-btn">Cancel</a>
+									</div>
+									<div class="text-right ui-block-b xs-pad">
+										<a href="javascript:void(0);"
+											class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b app-bg app-clor modal-yes-btn">Send</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Connect Modal -->
+		<div class="modal fade" id="connectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+			aria-hidden="true" data-overlay-theme="b" data-theme="b" data-dismissible="false">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header" data-role="header" data-theme="a">
+						<a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal"
+							class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right close-dialog">Close</a>
+					</div>
+					<div class="modal-body">
+						<div role="main" class="ui-content">
+							<div class="text-center signup-form pad-10">
+								<h4>Are you sure you want to connect with (Username)?</h4>
+							</div>
+							<div class="modal-footer npad">
+								<div class="ui-grid-a full-span">
+									<div class="text-left ui-block-a xs-pad">
+										<a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal"
+											class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b modal-no-btn">No</a>
+									</div>
+									<div class="text-right ui-block-b xs-pad">
+										<a href="javascript:void(0);"
+											class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b app-bg app-clor modal-yes-btn">Yes</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="disconnectModal" tabindex="-1" role="dialog"
+			aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-overlay-theme="b" data-theme="b"
+			data-dismissible="false">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header" data-role="header" data-theme="a">
+						<a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal"
+							class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right close-dialog">Close</a>
+					</div>
+					<div class="modal-body">
+						<div role="main" class="ui-content">
+							<div class="text-center signup-form pad-10">
+								<h4>
+									Are you sure you want to remove (Username) from your
+									connections?
+								</h4>
+							</div>
+							<div class="modal-footer npad">
+								<div class="ui-grid-a full-span">
+									<div class="text-left ui-block-a xs-pad">
+										<a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal"
+											class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b modal-no-btn">No</a>
+									</div>
+									<div class="text-right ui-block-b xs-pad">
+										<a href="javascript:void(0);"
+											class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b app-bg app-clor modal-yes-btn">Yes</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div data-role="" data-position="fixed" role="contentinfo" class="ui-footer ui-bar-inherit ui-footer-fixed">
+			<div class="text-center footer-block">
+				<div class="ui-grid-c">
+					<div class="ui-block-a">
+						<div class="footer-btn-block">
+							<a href="home.html" rel="external" class="footer-link active">
+								<span class="footer-icon fa fa-home"></span><br /><span
+									class="footer-icon-text">Home</span>
+							</a>
+						</div>
+					</div>
+					<div class="ui-block-b">
+						<div class="footer-btn-block">
+							<a href="connections.html" rel="external" class="footer-link">
+								<span class="footer-icon fa fa-users"></span><span
+									class="footer-badge">90</span><br /><span class="footer-icon-text">My
+									Connections</span>
+							</a>
+						</div>
+					</div>
+					<div class="ui-block-c">
+						<div class="footer-btn-block">
+							<a href="meeting-manager.html" rel="external" class="footer-link">
+								<span class="footer-icon fa fa-calendar"></span><span
+									class="footer-badge">7</span><br /><span class="footer-icon-text">Meetings</span>
+							</a>
+						</div>
+					</div>
+					<div class="ui-block-d">
+						<div class="footer-btn-block">
+							<a href="messages.html" rel="external" class="footer-link">
+								<span class="footer-icon fa fa-envelope"></span><span
+									class="footer-badge">50</span><br /><span class="footer-icon-text">Messages</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--
+	<script type="text/javascript" id="add_privacy_banner" src="http://www.cs.unibo.it/projects/privacy/js/add_privacy_banner_nocookie.js"></script>
+	<div style="font-family: arial; font-size: 12px; padding: 2px; width: 100%; z-index: 100; background: rgb(68, 68, 68) none repeat scroll 0% 0%; color: rgb(255, 255, 255);">
+	<a href="http://www.cs.unibo.it/projects/privacy/nocookie/privacy.pdf" style="color: white" target="_blank">Privacy Policy</a>
+	</div>
+	-->
+
+	<div id="mySidenav" class="sidenav">
+		<div class="mobile-sidebar-display home-left-sticky-component width---250px">
+			<div class="card border-light">
+				<div class="text-white card-header bg-red-extra d-flex align-items-center rounded-0">
+					<h6 class="text-center text-white card-title text-bold-600 text-capitalize w-100">
+						My Dashboard</h6>
+					<a href="javascript:void(0)" class="text-white closebtn" onclick="closeNav()">×</a>
+				</div>
+				<div class="user-info">
+					<div class="text-center user-name d-block">
+						<img class="rounded-circle avator" src="images/avatar-s-1.png" alt="">
+						<div class="text-center">
+							<h6>Holley Scott</h6>
+							<p class="mb-0">job_title</p>
+							<p class="mb-0">company_name</p>
+							<p class="mb-0">
+								<button href="javascript:void();" class="my-1 text-white btn btn-sm btn-danger-2">
+									<small>
+										<b>Upgrade Free Account</b>
+									</small>
+								</button>
+							</p>
+						</div>
+					</div>
+
+					<ul class="text-truncate pl-25 sidebar-ul-border list-unstyled">
+						<li><img src="images/Icons-in-Black-23.svg" width="35" alt="">
+							<a href="meeting-manager.html">Meetings
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span>
+							</a>
+
+						</li>
+						<li><img src="images/Icons-in-Black-24.svg" width="35" alt=""><a
+								href="meeting-requests.html">Meetup
+								requests <span
+									class="badge badge-secondary badge-red-extra mb-25 pull-right">xx</span></a>
+						</li>
+						<li><i class="fa fa-inbox"></i><a href="messages.html">Messages
+								<span class="badge badge-secondary badge-outline-secondary pull-right">xx</span></a>
+						</li>
+						<li><i class="fa fa-bell"></i><a href="notifications.html">Notifications
+								<span class="badge badge-secondary badge-red-extra mb-25 pull-right">xx</span></a>
+						</li>
+						<li>
+							<img src="images/Task-black-01.svg" width="35" alt="">&nbsp;
+							<a href="my-notes-and-events.html">
+								My Tasks &amp; Notes
+								<span class="badge badge-outline-secondary mb-25 pull-right">
+									xx
+								</span>
+							</a>
+						</li>
+					</ul>
+					<ul class="text-truncate pl-25 sidebar-ul-border list-unstyled">
+						<li><img src="images/Icons-in-Black-02.svg" width="35" alt=""><a href="my-events.html">My
+								Events
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span>
+							</a>
+						</li>
+						<li><i class="fa fa-calendar"></i><a href="my-calendar.html">My
+								Calendar</a>
+						</li>
+					</ul>
+					<ul class="text-truncate pl-25 sidebar-ul-border">
+						<li><img src="images/Icons-in-Black-11.svg" width="35" alt=""><a href="connections.html">My
+								Connections
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span></a>
+						</li>
+						<li><i class="fa fa-user-plus"></i><a href="connection-requests.html">Connection Requests
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span></a>
+						</li>
+						<li><i class="fa fa-rss-square"></i><a href="following.html">Following
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span></a>
+						</li>
+						<li><img src="images/Icons-in-Black-09.svg" width="35" alt=""><a href="followers.html">Followers
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span></a>
+						</li>
+						<li><img src="images/Icons-in-Black-04.svg" width="35" alt=""><a
+                                href="who-is-online.html">Who's
+                                Online
+                                <span class="badge badge-outline-secondary pull-right mt-25">xx</span></a>
+                        </li>
+					</ul>
+					<ul class="text-truncate pl-25 sidebar-ul-border">
+						<li><img src="images/Icons-in-Black-12.svg" width="35" alt=""><a href="my-profile-views.html">My
+								Profile Views
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span></a>
+						</li>
+						<li><img src="images/Icons-in-Black-12.svg" width="35" alt=""><a href="my-opportunity.html">My
+								Opportunity...
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span></a>
+						</li>
+					</ul>
+					<ul class="text-truncate pl-25 sidebar-ul-border">
+						<li><i class="fa fa-database"></i><a href="company-bookmarks.html">Company
+								Bookmarks</a></li>
+						<li><i class="fa fa-user-circle"></i><a href="edit-profile.html">Update
+								Profile</a></li>
+						<li><img src="images/Contacts.svg" width="35" alt=""><a href="contact-us.html">Contact Us</a>
+						</li>
+						<li><img src="javascript:void(0);" width="35" alt=""><a href="imprint.html">Imprint/ Terms</a>
+						</li>
+					</ul>
+					<img src="images/logo-1.png" alt="" class="pt-2 img-fluid pb-25">
+					<img src="images/logo-33.png" alt="" class="pb-2 img-fluid last--logo">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/dashboard.js"></script>
+
+	<div class="ui-loader ui-corner-all ui-body-a ui-loader-default">
+		<span class="ui-icon-loading"></span>
+		<h1>loading</h1>
+	</div>
+	<script>
+		$(window).on("load", function () {
+			$(".sub-page-header-btn").trigger("click");
+		});
+
+		// tell the embed parent frame the height of the content
+		if (window.parent && window.parent.parent) {
+			window.parent.parent.postMessage(
+				[
+					"resultsFrame",
+					{
+						height: document.body.getBoundingClientRect().height,
+						slug: "3Lqhov14",
+					},
+				],
+				"*"
+			);
+		}
+
+		// always overwrite window.name, in case users try to set it manually
+		window.name = "result";
+	</script>
+</body>
+
+</html>

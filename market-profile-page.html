@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html class="ui-mobile">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+	<title>GIN APP</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="Font-Awesome-4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/css.css" />
+	<script src="bootstrap/js/jquery.min.js"></script>
+	<script src="bootstrap/js/popper.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="bootstrap/js/jquery-1.11.3.min.js"></script>
+	<script src="jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+	<script src="./js/owl.carousel.min.js"></script>
+
+	<!-- TODO: Missing CoffeeScript 2 -->
+	<script type="text/javascript">
+		//<![CDATA[
+		$(window).load(function () {
+			var activePage = $.mobile.pageContainer.pagecontainer("getActivePage"),
+				screen = $.mobile.getScreenHeight(),
+				header = $(".ui-header", activePage).hasClass("ui-header-fixed") ?
+				$(".ui-header", activePage).outerHeight() - 1 :
+				$(".ui-header", activePage).outerHeight(),
+				footer = $(".ui-footer", activePage).hasClass("ui-footer-fixed") ?
+				$(".ui-footer", activePage).outerHeight() - 1 :
+				$(".ui-footer", activePage).outerHeight(),
+				panelheight = screen - header - footer;
+			$(".ui-panel").css({
+				top: header,
+				"min-height": panelheight,
+			});
+		});
+		//]]>
+	</script>
+</head>
+
+<body class="ui-mobile-viewport ui-overlay-a">
+	<div data-role="page" id="pageone" data-url="pageone" tabindex="0"
+		class="ui-page ui-page-theme-a ui-page-footer-fixed ui-page-active">
+		<div data-role="panel" id="navpanel" data-theme="a" data-display="overlay" data-position="right"
+			data-position-fixed="true"
+			class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-panel-closed ui-body-a ui-panel-animate">
+			<div class="ui-panel-inner">
+				<div data-role="controlgroup" data-corners="false" class="ui-controlgroup ui-controlgroup-vertical">
+					<div class="ui-controlgroup-controls">
+						<a href="home.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all ui-first-child" role="button"><i
+								class="fa fa-home"></i> Home</a>
+						<a href="connections.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-link"></i> My Connections
+							<span class="nav-numeric">(xx)</span>
+						</a>
+						<a href="database.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-database"></i> Industry Database
+							<span class="nav-numeric">(xx)</span>
+						</a>
+						<a href="events.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button">
+							<img src="images/Icons-in-Black-02.svg" width="30" /> Events / Planning <span
+								class="nav-numeric">(xx)</span>
+						</a>
+						<a href="networking-members.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button">
+							<img src="images/Icons-in-Black-04.svg" width="30" />Industry Network
+							<span class="nav-numeric">(xx)</span>
+						</a>
+						<a href="marketplace.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button">
+							<img src="images/Icons-in-Black-03.svg" width="30" /> Marketplace
+							<span class="nav-numeric">(xx)</span>
+						</a>
+						<a href="crm-contacts.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-address-card"></i> Biz Dev
+							<span class="">Contacts <span class="nav-numeric">(xx)</span></span>
+						</a>
+						<a href="crm-pipeline.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button">
+							<img src="images/Icons-in-Black-01.svg" width="30" /> Biz Dev
+							<span class="">Pipeline <span class="nav-numeric">(xx)</span></span>
+						</a>
+						<a href="industry-news.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-newspaper-o"></i> Industry News
+							<span class="nav-numeric">(xx)</span>
+						</a>
+						<a href="industry-team-news.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-file-text"></i> News From Our Team
+							<span class="nav-numeric">(xx)</span>
+						</a>
+						<a href="networking-group-page.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-user"></i> My Profile</a>
+						<a href="pricing.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-tags"></i> Pricing</a>
+						<a href="login.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-sign-in"></i> Login</a>
+						<a href="signup.html" rel="external" data-role="button"
+							class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+								class="fa fa-sign-out"></i> Signup</a>
+						<a href="#" rel="external" data-role="button"
+							class="text-center ui-link ui-shadow ui-corner-all ui-last-child">
+							Version (xx)</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="header" data-role="header" data-theme="b" role="banner" class="ui-header ui-bar-b main-header-two">
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="text-left com-logo">
+						<img src="images/logo.png" class="logo" />
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<a id="bars-button" data-icon="bars"
+						class="ui-btn-right ui-link ui-btn ui-btn-icon-left ui-shadow ui-corner-all menu-bars-btn menu-btn"
+						href="#navpanel" data-role="button" role="button"><i class="fa fa-bars"></i></a>
+				</div>
+			</div>
+			<!-- /grid-a -->
+		</div>
+
+		<div data-role="main" class="ui-content ui-content-comp bg-light">
+			<div class="top-marginer"></div>
+
+			<div data-role="content">
+				<div class="home-user-profile home-user-profile-only-btn mx-1">
+					<div class="d-flex">
+						<div class="col npad form-pad-1">
+							<a id="myDashboard" href="javascript:void(0);" data-transition="slide"
+								class="ui-btn ui-icon-bars ui-btn-icon-left ui-shadow-icon ui-btn-b view-prof-btn app-bg">My
+								Dashboard</a>
+						</div>
+						<div class="col npad form-pad-2">
+							<button type="button" onclick="location.href='meeting-manager.html'"
+								class="ui-btn ui-icon-action ui-btn-icon-left ui-shadow-icon ui-btn-b view-prof-btn app-bg">Meeting
+								Manager</button>
+						</div>
+					</div>
+				</div>
+				<div class="pricing crm crm-contacts">
+					<div class="p-0 crm-contacts-comp">
+						<div class="networking-members events-page company-database">
+							<div class="events">
+								<div class="bg-light">
+									<div class="crm-title-comp app-bg back-btn-cont">
+
+										<div
+											class="px-1 crm-title-comp app-bg back-btn-cont d-flex justify-content-between align-items-center">
+											<button onclick="window.history.go(-1)" href="javascript:void(0);"
+												type="button"
+												class="main-page-header-back-btn btn-back btn--round ui-btn ui-btn-b ui-icon-arrow-l ui-btn-icon-left ui-shadow ui-corner-all btn-rounded-circle">
+												Back
+											</button>
+											<h4 class="text-center page-main-heading nmarg pad-10">
+												<b>{Company Name},<br />
+													{City & {Country}</b>
+											</h4>
+											<i class="text-white fa fa-question-circle" data-toggle="popover"
+												data-placement="bottom" data-content="" data-trigger="hover"
+												data-original-title="Biz Dev Contacts"></i>
+										</div>
+									</div>
+									<div class="bg-white">
+
+										<div
+											class="mb-1 d-flex bg-light justify-content-between align-items-center text-truncate">
+											<p class="p-1 mb-0 border-right border-dark">Marketplace</p>
+											<p class="p-1 mb-0 text-center border-right border-dark">Main Category</p>
+											<p class="p-1 mb-0 border-slft">Posted: xx/xx/xxxx
+											</p>
+										</div>
+
+										<div class="row d-flex d-md-none">
+											<div class="col-6 ">
+												<div class="tl-art-work schedule--meeting-carousel bg-light-grey">
+													<div id="carouselExampleIndicators"
+														class="carousel slide pointer-event" data-ride="carousel">
+														<ol class="carousel-indicators">
+															<li data-target="#carouselExampleIndicators"
+																data-slide-to="0" class=""></li>
+															<li data-target="#carouselExampleIndicators"
+																data-slide-to="1" class=""></li>
+															<li data-target="#carouselExampleIndicators"
+																data-slide-to="2" class="active"></li>
+														</ol>
+														<div class="carousel-inner">
+															<div class="carousel-item">
+																<img src="images/avatar-l-1.png" class="d-block w-100"
+																	alt="...">
+															</div>
+															<div class="carousel-item">
+																<img src="images/avatar-l-1.png" class="d-block w-100"
+																	alt="...">
+															</div>
+															<div class="carousel-item active">
+																<img src="images/avatar-l-1.png" class="d-block w-100"
+																	alt="...">
+															</div>
+														</div>
+														<a class="bg-transparent carousel-control-prev h-100"
+															href="#carouselExampleIndicators" role="button"
+															data-slide="prev">
+															<span class="carousel-control-prev-icon"
+																aria-hidden="true"></span>
+															<span class="sr-only">Previous</span>
+														</a>
+														<a class="bg-transparent carousel-control-next h-100"
+															href="#carouselExampleIndicators" role="button"
+															data-slide="next">
+															<span class="carousel-control-next-icon"
+																aria-hidden="true"></span>
+															<span class="sr-only">Next</span>
+														</a>
+													</div>
+												</div>
+
+											</div>
+
+											<div class="col-6 schedule--meeting-carousel bg-light-grey">
+												<div
+													class="embed-responsive embed-responsive-item embed-responsive-16by9 marketplace--video chedule--meeting-carousel ">
+													<iframe width="853 " height="480 "
+														src="https://www.youtube.com/embed/WmKZaMDmwCo "
+														allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture "
+														allowfullscreen=" "></iframe>
+												</div>
+											</div>
+										</div>
+
+										<div class="mb-1 row">
+											<div class="col-xl-8 col-lg-6 col-sm-6">
+												<div class="row no-gutters">
+													<div class="col-xl-6 col-lg-6 col-sm-6 border-lg--right">
+														<div
+															class="row no-gutters align-items-center justify-content-center mkt-user--info d-none d-md-flex">
+															<div class="pt-1 d-flex align-items-center w-100">
+																<img src="assets/images/logo/design-img-4.png"
+																	class="mx-1 rounded border--dark my-25" width="50"
+																	height="50" alt="">
+																<div>
+																	<p class="mb-0">
+																		Company Name
+																	</p>
+																	<p class="mb-0">
+																		Company Category
+																	</p>
+																</div>
+															</div>
+															<div class="pt-1 d-flex align-items-center w-100">
+																<img src="images/avatar-l-1.png"
+																	class="mx-1 rounded border--dark my-25" width="50"
+																	height="50" alt="">
+																<div>
+																	<p class="mb-0">By: (1st, last name)
+																	</p>
+																	<p class="mb-0">(Tile), (Company)
+																	</p>
+																	<p class="mb-0">(City &amp; Country)
+																	</p>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="col-xl-6 col-lg-6 col-sm-6 border-lg--right">
+														<div class="px-1 row">
+															<div class="col-12">
+																<p class="mb-1 m-sub-category text-bold-600">
+																	Sub-category
+																</p>
+															</div>
+															<div class="col-6">
+																<p class="mb-1 m-sub-category">Sub-category</p>
+															</div>
+															<div class="col-6">
+																<p class="mb-1 m-sub-category">Sub-category</p>
+															</div>
+															<div class="col-6">
+																<p class="mb-1 m-sub-category">Sub-category</p>
+															</div>
+															<div class="col-6">
+																<p class="mb-1 m-sub-category">Sub-category</p>
+															</div>
+															<div class="col-6">
+																<p class="mb-1 m-sub-category">Sub-category</p>
+															</div>
+															<div class="col-6">
+																<p class="mb-1 m-sub-category">Sub-category</p>
+															</div>
+														</div>
+													</div>
+
+													<div class="col-12 d-none d-sm-block">
+														<div class="entry--content w-100 ">
+															<div
+																class="py-0 border-border-top-light marketplace--verbiage ">
+																<p class="mb-0 ">Opportunity Summary (Max. 2
+																	lines)
+																</p>
+															</div>
+
+															<div
+																class="border-border-top-light bg-light-grey marketplace--verbiage ">
+
+																<div class="py-2 "></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="col-xl-4 col-lg-6 col-sm-6">
+
+												<div class="text-center profile-card-with-cover-content">
+													<div class="py-1 card-body">
+
+														<div class="d-flex justify-content-center align-items-center">
+															<div class="d-flex red-diamond" data-toggle="tooltip"
+																data-placement="top" title=""
+																data-original-title="Pontential">
+																<div class="p-25">
+																	<img src="images/diamonds-05.svg" width="30" alt=""
+																		class="p-0 bg-transparent border-0 img-fluid">
+																</div>
+																<div class="p-25">
+																	<img src="images/diamonds-05.svg" width="30" alt=""
+																		class="p-0 bg-transparent border-0 img-fluid">
+																</div>
+																<div class="p-25">
+																	<img src="images/diamonds-03.svg" width="30" alt=""
+																		class="p-0 bg-transparent border-0 img-fluid">
+																</div>
+															</div>
+														</div>
+
+														<div class="d-flex justify-content-between align-items-center">
+															<div class="border-0 socially-icons px-50 ml-25"
+																data-toggle="tooltip" data-placement="top" title=""
+																data-original-title="Connections">
+																<span onclick="location.href='user-connection.html'"><i
+																		class="fa fa-handshake-o fs-17 handshaky"></i>
+																	(xx)</span>
+															</div>
+															<div class="border-0 socially-icons px-50 ml-25"
+																data-toggle="tooltip" data-placement="top" title=""
+																data-original-title="Mutual Connections">
+																<a data-toggle="modal" data-target="#mutualConnections">
+																	<i class="fa fa-link fs-17"></i>
+																	(xx)
+																</a>
+															</div>
+															<div class="border-0 socially-icons px-50 ml-25"
+																data-toggle="tooltip" data-placement="top" title=""
+																data-original-title="Meeting Calendar">
+																<img src="images/Icons-in-Black-02.svg" width="35"
+																	alt=""> (xx)
+															</div>
+														</div>
+
+
+														<div class="d-flex flex-column my-50">
+															<button type="button" onclick="location.href='#'"
+																class="mx-auto my-0 btn btn-sm btn-outline-message btn-round pull-right btn-100 btn-custom"
+																data-toggle="tooltip" data-placement="top" title=""
+																data-original-title="Follow">
+																<i class="fa fa-rss-square"></i>
+																Follow
+															</button>
+															<button type="button"
+																class="mx-auto my-0 btn btn-outline-message btn-sm btn-round pull-right btn-100 btn-custom">
+																<i class="fa fa-handshake-o"></i>
+																Connect
+															</button>
+															<button type="button" onclick="location.href='#'"
+																class="mx-auto my-0 btn btn-sm btn-outline-message btn-round pull-right btn-100 btn-custom"
+																data-toggle="modal" data-target="#exampleModalCenter">
+																<i class="fa fa-comment"></i>
+																Message
+															</button>
+														</div>
+
+													</div>
+
+													<div class="row no-gutters">
+														<div class="col-12">
+															<button type="button" name="button"
+																class="text-white btn btn-social btn-block bg-success-2 rounded-bottom btn-suggest-meeting">Suggest
+																Meeting<i
+																	class="float-left fa fa-calendar bg-success-2"></i></button>
+															<button type="button" name="button"
+																class="my-0 text-white btn btn-social btn-block btn-info rounded-bottom btn-suggest-meeting">Add
+																To Biz Dev
+																Contacts<i class="float-left fa fa-address-card"></i>
+															</button>
+														</div>
+													</div>
+
+													<div class="px-1 card-footer card-footer-2 d-block d-md-none">
+														<div class="text-center row nmarg">
+															<div
+																class="col-lg-4 col-md-4 col-sm-4 col-xs-4 npad database-social-col col-4">
+																<div class="socially-icons database-social-comp text-truncate"
+																	data-toggle="tooltip" data-placement="top" title=""
+																	data-original-title="Connect">
+																	<a href="javascript:void(0);"
+																		class="text-secondary"><span
+																			class="fa fa-plus-square"><span
+																				class="database-social-action-3">
+
+																				Bookmark
+																			</span></span></a>
+																</div>
+															</div>
+															<div
+																class="col-lg-4 col-md-4 col-sm-4 col-xs-4 npad database-social-col col-4">
+																<div class="socially-icons database-social-comp text-truncate"
+																	data-toggle="tooltip" data-placement="top" title=""
+																	data-original-title="Follow">
+																	<a href="javascript:void(0);"
+																		class="db-follow-toggle text-secondary">
+																		<span class="fa fa-rss-square">
+																			<span class="database-social-action-2">
+																				Follow
+																			</span>
+																		</span>
+																	</a>
+																</div>
+															</div>
+															<div
+																class="col-lg-4 col-md-4 col-sm-4 col-xs-4 npad database-social-col col-4">
+																<div class="socially-icons database-social-comp text-truncate"
+																	data-toggle="tooltip" data-placement="top" title=""
+																	data-original-title="Add to pipeline">
+																	<a href="javascript:void(0);"
+																		class="text-secondary"><span
+																			class="fa fa-plus"><span
+																				class="database-social-action-1">
+																				Biz
+																				Dev
+																			</span></span></a>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div
+														class="row no-gutters align-items-center justify-content-center mkt-user--info d-flex d-md-none">
+														<div class="d-flex align-items-center">
+															<div class="pt-1 d-flex align-items-center w-100">
+																<img src="images/logo-placeholder-png.png"
+																	class="mx-1 rounded border--dark my-25" width="50"
+																	height="50" alt="">
+																<div class="text-left">
+																	<p class="mb-0">
+																		Company Name
+																	</p>
+																	<p class="mb-0">
+																		Company Category
+																	</p>
+																</div>
+															</div>
+															<div class="pt-1 d-flex align-items-center w-100">
+																<img src="images/user-pic-1.PNG"
+																	class="mx-1 rounded border--dark my-25" width="50"
+																	height="50" alt="">
+																<div class="text-left">
+																	<p class="mb-0">By: (1st, last name)
+																	</p>
+																	<p class="mb-0">(Tile), (Company)
+																	</p>
+																	<p class="mb-0">(City &amp; Country)
+																	</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+											</div>
+										</div>
+
+										<div class="row d-none d-md-flex">
+											<div class="col-sm-8 ">
+												<div class="tl-art-work schedule--meeting-carousel bg-light-grey">
+													<div id="carouselExampleIndicators"
+														class="carousel slide pointer-event" data-ride="carousel">
+														<ol class="carousel-indicators">
+															<li data-target="#carouselExampleIndicators"
+																data-slide-to="0" class=""></li>
+															<li data-target="#carouselExampleIndicators"
+																data-slide-to="1" class=""></li>
+															<li data-target="#carouselExampleIndicators"
+																data-slide-to="2" class="active"></li>
+														</ol>
+														<div class="carousel-inner">
+															<div class="carousel-item">
+																<img src="images/avatar-l-1.png" class="d-block w-100"
+																	alt="...">
+															</div>
+															<div class="carousel-item">
+																<img src="images/avatar-l-1.png" class="d-block w-100"
+																	alt="...">
+															</div>
+															<div class="carousel-item active">
+																<img src="images/avatar-l-1.png" class="d-block w-100"
+																	alt="...">
+															</div>
+														</div>
+														<a class="bg-transparent carousel-control-prev h-100"
+															href="#carouselExampleIndicators" role="button"
+															data-slide="prev">
+															<span class="carousel-control-prev-icon"
+																aria-hidden="true"></span>
+															<span class="sr-only">Previous</span>
+														</a>
+														<a class="bg-transparent carousel-control-next h-100"
+															href="#carouselExampleIndicators" role="button"
+															data-slide="next">
+															<span class="carousel-control-next-icon"
+																aria-hidden="true"></span>
+															<span class="sr-only">Next</span>
+														</a>
+													</div>
+												</div>
+
+											</div>
+
+											<div
+												class="col-sm-4 schedule--meeting-carousel bg-light-grey d-none d-sm-flex ">
+												<div
+													class="embed-responsive embed-responsive-item embed-responsive-16by9 marketplace--video chedule--meeting-carousel ">
+													<iframe width="853 " height="480 "
+														src="https://www.youtube.com/embed/WmKZaMDmwCo "
+														allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture "
+														allowfullscreen=" "></iframe>
+												</div>
+											</div>
+										</div>
+
+										<div class="row ">
+											<div class="col-sm-6 ">
+												<div class="mx-0 row 1 ">
+
+													<div class="px-0 col-lg-12 col-sm-12 ">
+														<div class="entry--content w-100 ">
+															<div
+																class="py-0 border-border-top-light marketplace--verbiage ">
+																<p class="mb-0 ">Opportunity Summary (Max. 2
+																	lines)
+																</p>
+															</div>
+
+															<div
+																class="border-border-top-light bg-light-grey marketplace--verbiage ">
+
+																<div class="py-4 "></div>
+															</div>
+														</div>
+
+														<div class="entry--content w-100 ">
+															<div
+																class="py-0 border-border-top-light marketplace--verbiage ">
+																<p class="mb-0 ">What we offer:
+																</p>
+															</div>
+
+															<div
+																class="border-border-top-light bg-light-grey marketplace--verbiage ">
+
+																<div class="py-4 "></div>
+															</div>
+														</div>
+
+														<div class="entry--content w-100 ">
+															<div
+																class="py-0 border-border-top-light marketplace--verbiage ">
+																<p class="mb-0 ">What we are looking for:
+																</p>
+															</div>
+
+															<div
+																class="border-border-top-light bg-light-grey marketplace--verbiage ">
+
+																<div class="py-4 "></div>
+															</div>
+														</div>
+
+														<div class="entry--content w-100 ">
+															<div
+																class="py-0 border-border-top-light marketplace--verbiage ">
+																<p class="mb-0 ">Platforms:
+																</p>
+															</div>
+
+															<div
+																class="border-border-top-light bg-light-grey marketplace--verbiage ">
+
+																<div class="py-4 "></div>
+															</div>
+														</div>
+
+														<div class="entry--content w-100 ">
+															<div
+																class="py-0 border-border-top-light marketplace--verbiage ">
+																<p class="mb-0 ">Genres:
+																</p>
+															</div>
+
+															<div
+																class="border-border-top-light bg-light-grey marketplace--verbiage ">
+
+																<div class="py-4 "></div>
+															</div>
+														</div>
+
+														<div class="entry--content w-100 ">
+															<div
+																class="py-0 border-border-top-light marketplace--verbiage ">
+																<p class="mb-0 ">Territories:
+																</p>
+															</div>
+
+															<div
+																class="border-border-top-light bg-light-grey marketplace--verbiage ">
+
+																<div class="py-4 "></div>
+															</div>
+														</div>
+
+														<div
+															class="border-border-top-light bg-light-grey marketplace--verbiage ">
+
+															<div class="py-4 "></div>
+														</div>
+													</div>
+
+												</div>
+											</div>
+
+											<div class="mb-2 "></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Send Message Modal -->
+					<div class="modal fade" id="sendMsgModal" tabindex="-1" role="dialog"
+						aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-overlay-theme="b"
+						data-theme="b" data-dismissible="false">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header" data-role="header" data-theme="a">
+									<a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal"
+										class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right close-dialog">Close</a>
+									<span>Send message to: (Username)</span>
+								</div>
+								<div class="modal-body">
+									<div role="main" class="ui-content">
+										<div class="signup-form">
+											<form>
+												<div class="signup-form-group">
+													<textarea name="" id="" rows="5" class="app-textarea"
+														placeholder="Write your message..."></textarea>
+												</div>
+											</form>
+											<br />
+										</div>
+										<div class="modal-footer npad">
+											<div class="ui-grid-a full-span">
+												<div class="text-left ui-block-a xs-pad">
+													<a href="javascript:void(0);" data-toggle="modal"
+														data-dismiss="modal"
+														class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b modal-no-btn">Cancel</a>
+												</div>
+												<div class="text-right ui-block-b xs-pad">
+													<a href="javascript:void(0);"
+														class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b app-bg app-clor modal-yes-btn">Send</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Connect Modal Individuals -->
+					<div class="modal fade" id="connectModal" tabindex="-1" role="dialog"
+						aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-overlay-theme="b"
+						data-theme="b" data-dismissible="false">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header" data-role="header" data-theme="a">
+									<a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal"
+										class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right close-dialog">Close</a>
+								</div>
+								<div class="modal-body">
+									<div role="main" class="ui-content">
+										<div class="text-center signup-form pad-10">
+											<h4>
+												Are you sure you want to connect with (Username)?
+											</h4>
+										</div>
+										<div class="modal-footer npad">
+											<div class="ui-grid-a full-span">
+												<div class="text-left ui-block-a xs-pad">
+													<a href="javascript:void(0);" data-toggle="modal"
+														data-dismiss="modal"
+														class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b modal-no-btn">No</a>
+												</div>
+												<div class="text-right ui-block-b xs-pad">
+													<a href="javascript:void(0);"
+														class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b app-bg app-clor modal-yes-btn">Yes</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="modal fade" id="disconnectModal" tabindex="-1" role="dialog"
+						aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-overlay-theme="b"
+						data-theme="b" data-dismissible="false">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header" data-role="header" data-theme="a">
+									<a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal"
+										class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right close-dialog">Close</a>
+								</div>
+								<div class="modal-body">
+									<div role="main" class="ui-content">
+										<div class="text-center signup-form pad-10">
+											<h4>
+												Are you sure you want to remove (Username) from your
+												connections?
+											</h4>
+										</div>
+										<div class="modal-footer npad">
+											<div class="ui-grid-a full-span">
+												<div class="text-left ui-block-a xs-pad">
+													<a href="javascript:void(0);" data-toggle="modal"
+														data-dismiss="modal"
+														class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b modal-no-btn">No</a>
+												</div>
+												<div class="text-right ui-block-b xs-pad">
+													<a href="javascript:void(0);"
+														class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b app-bg app-clor modal-yes-btn">Yes</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Connect Modal Companies -->
+					<div class="modal fade" id="connectCompanyModal" tabindex="-1" role="dialog"
+						aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-overlay-theme="b"
+						data-theme="b" data-dismissible="false">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header" data-role="header" data-theme="a">
+									<a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal"
+										class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right close-dialog">Close</a>
+								</div>
+								<div class="modal-body">
+									<div role="main" class="ui-content">
+										<div class="text-center signup-form pad-10">
+											<h4>
+												Are you sure you want to connect with (Company Name)?
+											</h4>
+										</div>
+										<div class="modal-footer npad">
+											<div class="ui-grid-a full-span">
+												<div class="text-left ui-block-a xs-pad">
+													<a href="javascript:void(0);" data-toggle="modal"
+														data-dismiss="modal"
+														class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b modal-no-btn">No</a>
+												</div>
+												<div class="text-right ui-block-b xs-pad">
+													<a href="javascript:void(0);"
+														class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b app-bg app-clor modal-yes-btn">Yes</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Follow Modal Companies -->
+					<div class="modal fade" id="followCompanyModal" tabindex="-1" role="dialog"
+						aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-overlay-theme="b"
+						data-theme="b" data-dismissible="false">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header" data-role="header" data-theme="a">
+									<a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal"
+										class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right close-dialog">Close</a>
+								</div>
+								<div class="modal-body">
+									<div role="main" class="ui-content">
+										<div class="text-center signup-form pad-10">
+											<h4>Are you sure you want to Follow (Company Name)?</h4>
+										</div>
+										<div class="modal-footer npad">
+											<div class="ui-grid-a full-span">
+												<div class="text-left ui-block-a xs-pad">
+													<a href="javascript:void(0);" data-toggle="modal"
+														data-dismiss="modal"
+														class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b modal-no-btn">No</a>
+												</div>
+												<div class="text-right ui-block-b xs-pad">
+													<a href="javascript:void(0);"
+														class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b app-bg app-clor modal-yes-btn">Yes</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div data-role="" data-position="fixed" role="contentinfo" class="ui-footer ui-bar-inherit ui-footer-fixed">
+			<div class="text-center footer-block">
+				<div class="ui-grid-c">
+					<div class="ui-block-a">
+						<div class="footer-btn-block">
+							<a href="home.html" rel="external" class="footer-link active">
+								<span class="footer-icon fa fa-home"></span><br /><span
+									class="footer-icon-text">Home</span>
+							</a>
+						</div>
+					</div>
+					<div class="ui-block-b">
+						<div class="footer-btn-block">
+							<a href="connections.html" rel="external" class="footer-link">
+								<span class="footer-icon fa fa-users"></span><span
+									class="footer-badge">90</span><br /><span class="footer-icon-text">My
+									Connections</span>
+							</a>
+						</div>
+					</div>
+					<div class="ui-block-c">
+						<div class="footer-btn-block">
+							<a href="meeting-manager.html" rel="external" class="footer-link">
+								<span class="footer-icon fa fa-calendar"></span><span
+									class="footer-badge">7</span><br /><span class="footer-icon-text">Meetings</span>
+							</a>
+						</div>
+					</div>
+					<div class="ui-block-d">
+						<div class="footer-btn-block">
+							<a href="messages.html" rel="external" class="footer-link">
+								<span class="footer-icon fa fa-envelope"></span><span
+									class="footer-badge">50</span><br /><span class="footer-icon-text">Messages</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--      *************** page two company profile page ****************   -->
+
+	<div data-role="page" id="pagetwo">
+		<div data-role="main" class="ui-content ui-content-comp bg-gray-4 networking-members">
+			<div data-role="header" class="sub-page-header">
+				<!-- data-transition = "pop"    class="col-lg-3 col-md-3 col-sm-4 col-xs-4"  -->
+				<a href="#pageone" data-transition="slide" data-direction="reverse"
+					class="ui-btn ui-btn-b ui-corner-all ui-shadow ui-icon-arrow-l ui-btn-icon-left sub-page-header-btn">Back</a>
+				<h1 class="sub-page-header-title"><span> (Company Name) </span></h1>
+			</div>
+
+			<div data-role="content">
+				<div class="user-profile-page-comp">
+					<div class="user-profile-avatars">
+						<div class="user-profile-bg-avatar"
+							style="background-image: url('images/img-placeholder-1.jpg')">
+							<div class="user-profile-avatar">
+								<span class="company-pf-wrapper"><img src="images/design-img-1.jpg"
+										class="company-pf-avatar" /></span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="networking-members events-page events-sub-page">
+					<div class="company-profile-page">
+						<div class="text-center details-1">
+							<p class="text-muted"><b>Member Since:</b> 2020</p>
+							<p class="company-profile-tags">
+								<b>Tags</b>
+								<span>PC Game Development, Adventure Game Development, Narrative
+									Game Development, PC Games</span>
+							</p>
+						</div>
+						<div class="company-relations-btns">
+							<fieldset class="ui-grid-b">
+								<div class="ui-block-a btn-block-comp">
+									<button class="ui-btn ui-corner-all ui-btn-icon-left connect">
+										<i class="fa fa-plus-square"></i> Connect
+									</button>
+									<button class="ui-btn ui-corner-all ui-btn-icon-left pending">
+										<i class="fa fa-refresh"></i> Pending
+									</button>
+									<button class="ui-btn ui-corner-all ui-btn-icon-left connected">
+										<i class="fa fa-check-square"></i> Connected
+									</button>
+								</div>
+								<div class="ui-block-b btn-block-comp">
+									<button class="ui-btn ui-corner-all ui-btn-icon-left follow">
+										<i class="fa fa-rss-square"></i> Follow
+									</button>
+									<button class="ui-btn ui-corner-all ui-btn-icon-left following">
+										<i class="fa fa-rss"></i> Following
+									</button>
+								</div>
+								<div class="ui-block-c btn-block-comp">
+									<button class="ui-btn ui-corner-all ui-btn-icon-left crm">
+										<i class="fa fa-plus"></i> CRM
+									</button>
+									<button class="ui-btn ui-corner-all ui-btn-icon-left crm-added">
+										<i class="fa fa-check"></i> CRM
+									</button>
+								</div>
+							</fieldset>
+						</div>
+						<div class="details-2">
+							<div class="address-heading">
+								<div class="ui-grid-a">
+									<div class="ui-block-a">
+										<h4 class="search-form-label">Address</h4>
+									</div>
+									<div class="ui-block-b">
+										<div class="employee-btn-comp">
+											<button class="ui-btn ui-corner-all ui-btn-icon-left employee-btn">
+												<i class="fa fa-user-tie"></i> I work here
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="profile-company-details pad-10">
+								<div class="row">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										<div class="profile-company-table">
+											<table class="table table-borderless">
+												<tbody>
+													<tr>
+														<th scope="row">Street:</th>
+														<td>2465 Kennedy Court</td>
+													</tr>
+													<tr>
+														<th scope="row">City:</th>
+														<td>Frankfurt</td>
+													</tr>
+													<tr>
+														<th scope="row">Country:</th>
+														<td>Germany</td>
+													</tr>
+													<tr>
+														<th scope="row">Phone Number:</th>
+														<td>774-306-4124</td>
+													</tr>
+													<tr>
+														<th scope="row">Company website:</th>
+														<td>www.lorumIpsum.com</td>
+													</tr>
+													<div class="ui-grid-c">
+																<div class="ui-block-a">
+																	<a href="#" class="fafb"><span class="fa fa-facebook" aria-hidden="true"></span></a>						
+																</div>
+																<div class="ui-block-b">
+																	<a href="#" class="fatwitter"><span class="fa fa-twitter" aria-hidden="true"></span></a>									
+																</div>
+																<div class="ui-block-c">
+																	<a href="#" class="fain"><span class="fa fa-linkedin" aria-hidden="true"></span></a>														
+																</div>
+																<div class="ui-block-d">
+																	<a href="#" class="faxing"><span class="fa fa-xing" aria-hidden="true"></span></a>														
+																</div>
+															</div>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="pad-10">
+								<p class="profile-company-desc">
+									Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+									Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+									natoque penatibus et magnis dis parturient montes, nascetur
+									ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+									eu, pretium
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" role="contentinfo"
+			class="ui-footer ui-bar-inherit ui-footer-fixed slideup ui-fixed-hidden">
+			<h1 class="ui-title" role="heading" aria-level="1">
+				<!-- Copyright W3Schools -->
+			</h1>
+		</div>
+	</div>
+
+	<!--
+	<script type="text/javascript" id="add_privacy_banner" src="http://www.cs.unibo.it/projects/privacy/js/add_privacy_banner_nocookie.js"></script>
+	<div style="font-family: arial; font-size: 12px; padding: 2px; width: 100%; z-index: 100; background: rgb(68, 68, 68) none repeat scroll 0% 0%; color: rgb(255, 255, 255);">
+	<a href="http://www.cs.unibo.it/projects/privacy/nocookie/privacy.pdf" style="color: white" target="_blank">Privacy Policy</a>
+	</div>
+	-->
+
+	<div id="mySidenav" class="sidenav">
+		<div class="mobile-sidebar-display home-left-sticky-component width---250px">
+			<div class="card border-light">
+				<div class="text-white card-header bg-red-extra d-flex align-items-center rounded-0">
+					<h6 class="text-center text-white card-title text-bold-600 text-capitalize w-100">
+						My Dashboard</h6>
+					<a href="javascript:void(0)" class="text-white closebtn" onclick="closeNav()">×</a>
+				</div>
+				<div class="user-info">
+					<div class="text-center user-name d-block">
+						<img class="rounded-circle avator" src="images/avatar-s-1.png" alt="">
+						<div class="text-center">
+							<h6>Holley Scott</h6>
+							<p class="mb-0">job_title</p>
+							<p class="mb-0">company_name</p>
+							<p class="mb-0">
+								<button href="javascript:void();" class="my-1 text-white btn btn-sm btn-danger-2">
+									<small>
+										<b>Upgrade Free Account</b>
+									</small>
+								</button>
+							</p>
+						</div>
+					</div>
+
+					<ul class="text-truncate pl-25 sidebar-ul-border list-unstyled">
+						<li><img src="images/Icons-in-Black-23.svg" width="35" alt="">
+							<a href="meeting-manager.html">Meetings
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span>
+							</a>
+
+						</li>
+						<li><img src="images/Icons-in-Black-24.svg" width="35" alt=""><a
+								href="meeting-requests.html">Meetup
+								requests <span
+									class="badge badge-secondary badge-red-extra mb-25 pull-right">xx</span></a>
+						</li>
+						<li><i class="fa fa-inbox"></i><a href="messages.html">Messages
+								<span class="badge badge-secondary badge-outline-secondary pull-right">xx</span></a>
+						</li>
+						<li><i class="fa fa-bell"></i><a href="notifications.html">Notifications
+								<span class="badge badge-secondary badge-red-extra mb-25 pull-right">xx</span></a>
+						</li>
+						<li>
+							<img src="images/Task-black-01.svg" width="35" alt="">&nbsp;
+							<a href="my-notes-and-events.html">
+								My Tasks &amp; Notes
+								<span class="badge badge-outline-secondary mb-25 pull-right">
+									xx
+								</span>
+							</a>
+						</li>
+					</ul>
+					<ul class="text-truncate pl-25 sidebar-ul-border list-unstyled">
+						<li><img src="images/Icons-in-Black-02.svg" width="35" alt=""><a href="my-events.html">My
+								Events
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span>
+							</a>
+						</li>
+						<li><i class="fa fa-calendar"></i><a href="my-calendar.html">My
+								Calendar</a>
+						</li>
+					</ul>
+					<ul class="text-truncate pl-25 sidebar-ul-border">
+						<li><img src="images/Icons-in-Black-11.svg" width="35" alt=""><a href="connections.html">My
+								Connections
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span></a>
+						</li>
+						<li><i class="fa fa-user-plus"></i><a href="connection-requests.html">Connection Requests
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span></a>
+						</li>
+						<li><i class="fa fa-rss-square"></i><a href="following.html">Following
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span></a>
+						</li>
+						<li><img src="images/Icons-in-Black-09.svg" width="35" alt=""><a href="followers.html">Followers
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span></a>
+						</li>
+						<li><img src="images/Icons-in-Black-04.svg" width="35" alt=""><a href="who-is-online.html">Who's
+								Online
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span></a>
+						</li>
+					</ul>
+					<ul class="text-truncate pl-25 sidebar-ul-border">
+						<li><img src="images/Icons-in-Black-12.svg" width="35" alt=""><a href="my-profile-views.html">My
+								Profile Views
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span></a>
+						</li>
+						<li><img src="images/Icons-in-Black-12.svg" width="35" alt=""><a href="my-opportunity.html">My
+								Opportunity...
+								<span class="badge badge-outline-secondary pull-right mt-25">xx</span></a>
+						</li>
+					</ul>
+					<ul class="text-truncate pl-25 sidebar-ul-border">
+						<li><i class="fa fa-database"></i><a href="company-bookmarks.html">Company
+								Bookmarks</a></li>
+						<li><i class="fa fa-user-circle"></i><a href="edit-profile.html">Update
+								Profile</a></li>
+						<li><img src="images/Contacts.svg" width="35" alt=""><a href="contact-us.html">Contact Us</a>
+						</li>
+						<li><img src="javascript:void(0);" width="35" alt=""><a href="imprint.html">Imprint/ Terms</a>
+						</li>
+					</ul>
+					<img src="images/logo-1.png" alt="" class="pt-2 img-fluid pb-25">
+					<img src="images/logo-33.png" alt="" class="pb-2 img-fluid last--logo">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/dashboard.js"></script>
+
+	<div class="ui-loader ui-corner-all ui-body-a ui-loader-default">
+		<span class="ui-icon-loading"></span>
+		<h1>loading</h1>
+	</div>
+	<script>
+		$(window).on("load", function () {
+			$(".sub-page-header-btn").trigger("click");
+		});
+
+		// tell the embed parent frame the height of the content
+		if (window.parent && window.parent.parent) {
+			window.parent.parent.postMessage(
+				[
+					"resultsFrame",
+					{
+						height: document.body.getBoundingClientRect().height,
+						slug: "3Lqhov14",
+					},
+				],
+				"*"
+			);
+		}
+
+		// always overwrite window.name, in case users try to set it manually
+		window.name = "result";
+		$(document).ready(function () {
+			$("#owl-demo").owlCarousel({
+				// autoPlay: 3000,
+				// items: 1,
+				// itemsDesktop: [1199, 3],
+				// itemsDesktopSmall: [979, 3],
+
+				// navigation: true,
+				autoPlay: 3000,
+				slideSpeed: 300,
+				paginationSpeed: 400,
+				singleItem: true,
+				items: 1,
+			});
+		});
+	</script>
+</body>
+
+</html>

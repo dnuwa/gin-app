@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/tour.css">
+
+    <title>App Tour Guide</title>
+
+</head>
+
+<body>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <img src="images/tour-images/1.jpg">
+        </div>
+
+    </div>
+    <br>
+
+
+
+    <div id="overlay" class=" position--top-tour">
+        <div id="text">
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+
+                <!-- Next and previous buttons -->
+                <a id="exit" class="exit btn btn-danger d--none" onclick="location.href='8-Welcome-Page.html'">EXIT</a>
+                <a id="prev" class="prev btn btn-danger d--none" onclick="plusSlides(-1)">PREV</a>
+                <a id="next" class="next btn btn-success d--none" onclick="plusSlides(1)">NEXT</a>
+                <a id="finish" class="next btn btn-success d--none"
+                    onclick="location.href='8-Welcome-Page.html'">FINISH</a>
+                <a href="tour.html" class="btn btn-success btn-tour-min--width">Go</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function on() {
+            document.getElementById("overlay").style.display = "block";
+        }
+    </script>
+
+    <script>
+        window.onload = function () {
+            document.getElementById("exit").style.display = 'inline-block';
+            document.getElementById("prev").style.display = 'none';
+
+        }
+    </script>
+
+    <script type="text/javascript">
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            if (slideIndex === 1) {
+                document.getElementById("prev").style.display = 'none';
+                document.getElementById("exit").style.display = 'inline-block';
+                document.getElementById("finish").style.display = 'none';
+                document.getElementById("next").style.display = 'inline-block';
+            } else if (slideIndex === slides.length) {
+
+                document.getElementById("prev").style.display = 'inline-block';
+                document.getElementById("exit").style.display = 'none';
+                document.getElementById("finish").style.display = 'inline-block';
+                document.getElementById("next").style.display = 'none';
+            } else {
+
+                document.getElementById("prev").style.display = 'inline-block';
+                document.getElementById("exit").style.display = 'none';
+                document.getElementById("next").style.display = 'inline-block';
+                document.getElementById("finish").style.display = 'none';
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html class="ui-mobile">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+    <title>GIN APP</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Font-Awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/css.css" />
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/jquery-1.11.3.min.js"></script>
+    <script src="jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- TODO: Missing CoffeeScript 2 -->
+    <script type="text/javascript">
+        //<![CDATA[
+        $(window).load(function () {
+            var activePage = $.mobile.pageContainer.pagecontainer("getActivePage"),
+                screen = $.mobile.getScreenHeight(),
+                header = $(".ui-header", activePage).hasClass("ui-header-fixed") ?
+                    $(".ui-header", activePage).outerHeight() - 1 :
+                    $(".ui-header", activePage).outerHeight(),
+                footer = $(".ui-footer", activePage).hasClass("ui-footer-fixed") ?
+                    $(".ui-footer", activePage).outerHeight() - 1 :
+                    $(".ui-footer", activePage).outerHeight(),
+                panelheight = screen - header - footer;
+            $(".ui-panel").css({
+                top: header,
+                "min-height": panelheight,
+            });
+        });
+		//]]>
+    </script>
+</head>
+
+<body class="ui-mobile-viewport ui-overlay-a">
+    <div data-role="page" id="pageone" data-url="pageone" tabindex="0"
+        class="ui-page ui-page-theme-a ui-page-footer-fixed ui-page-active">
+        <div data-role="panel" id="navpanel" data-theme="a" data-display="overlay" data-position="right"
+            data-position-fixed="true"
+            class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-panel-closed ui-body-a ui-panel-animate">
+            <div class="ui-panel-inner">
+                <div data-role="controlgroup" data-corners="false" class="ui-controlgroup ui-controlgroup-vertical">
+                    <div class="ui-controlgroup-controls">
+                        <a href="home.html" rel="external" data-role="button"
+                            class="text-left ui-link ui-btn ui-shadow ui-corner-all ui-first-child" role="button"><i
+                                class="fa fa-home"></i> Home</a>
+                        <a href="connections.html" rel="external" data-role="button"
+                            class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+                                class="fa fa-link"></i> My Connections
+                            <span class="nav-numeric">(xx)</span>
+                        </a>
+                        <a href="database.html" rel="external" data-role="button"
+                            class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+                                class="fa fa-database"></i> Industry Database
+                            <span class="nav-numeric">(xx)</span>
+                        </a>
+                        <a href="events.html" rel="external" data-role="button"
+                            class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button">
+                            <img src="images/Icons-in-Black-02.svg" width="30" /> Events / Planning <span
+                                class="nav-numeric">(xx)</span>
+                        </a>
+                        <a href="networking-members.html" rel="external" data-role="button"
+                            class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button">
+                            <img src="images/Icons-in-Black-04.svg" width="30" />Industry Network
+                            <span class="nav-numeric">(xx)</span>
+                        </a>
+                        <a href="marketplace.html" rel="external" data-role="button"
+                            class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button">
+                            <img src="images/Icons-in-Black-03.svg" width="30" /> Marketplace
+                            <span class="nav-numeric">(xx)</span>
+                        </a>
+                        <a href="crm-contacts.html" rel="external" data-role="button"
+                            class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+                                class="fa fa-address-card"></i> Biz Dev
+                            <span class="">Contacts <span class="nav-numeric">(xx)</span></span>
+                        </a>
+                        <a href="crm-pipeline.html" rel="external" data-role="button"
+                            class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button">
+                            <img src="images/Icons-in-Black-01.svg" width="30" /> Biz Dev
+                            <span class="">Pipeline <span class="nav-numeric">(xx)</span></span>
+                        </a>
+                        <a href="industry-news.html" rel="external" data-role="button"
+                            class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+                                class="fa fa-newspaper-o"></i> Industry News
+                            <span class="nav-numeric">(xx)</span>
+                        </a>
+                        <a href="industry-team-news.html" rel="external" data-role="button"
+                            class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+                                class="fa fa-file-text"></i> News From Our Team
+                            <span class="nav-numeric">(xx)</span>
+                        </a>
+                        <a href="networking-group-page.html" rel="external" data-role="button"
+                            class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+                                class="fa fa-user"></i> My Profile</a>
+                        <a href="pricing.html" rel="external" data-role="button"
+                            class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+                                class="fa fa-tags"></i> Pricing</a>
+                        <a href="login.html" rel="external" data-role="button"
+                            class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+                                class="fa fa-sign-in"></i> Login</a>
+                        <a href="signup.html" rel="external" data-role="button"
+                            class="text-left ui-link ui-btn ui-shadow ui-corner-all" role="button"><i
+                                class="fa fa-sign-out"></i> Signup</a>
+                        <a href="#" rel="external" data-role="button"
+                            class="text-center ui-link ui-shadow ui-corner-all ui-last-child">
+                            Version (xx)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="header" data-role="header" data-theme="b" role="banner" class="ui-header ui-bar-b main-header-two">
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <div class="text-left com-logo">
+                        <img src="images/logo.png" class="logo" />
+                    </div>
+                </div>
+                <div class="ui-block-b">
+                    <a id="bars-button" data-icon="bars"
+                        class="ui-btn-right ui-link ui-btn ui-btn-icon-left ui-shadow ui-corner-all menu-bars-btn menu-btn"
+                        href="#navpanel" data-role="button" role="button"><i class="fa fa-bars"></i></a>
+                </div>
+            </div>
+            <!-- /grid-a -->
+        </div>
+
+        <div data-role="main" class="bg-gray-4">
+            <div class="top-marginer"></div>
+
+            <div data-role="content">
+                <div class="mx-1 home-user-profile home-user-profile-only-btn">
+                    <div class="d-flex">
+                        <div class="col npad form-pad-1">
+                            <a id="myDashboard" href="javascript:void(0);" data-transition="slide"
+                                class="ui-btn ui-icon-bars ui-btn-icon-left ui-shadow-icon ui-btn-b view-prof-btn app-bg">My
+                                Dashboard</a>
+                        </div>
+                        <div class="col npad form-pad-2">
+                            <button type="button" onclick="location.href='meeting-manager.html'"
+                                class="ui-btn ui-icon-action ui-btn-icon-left ui-shadow-icon ui-btn-b view-prof-btn app-bg">Meeting
+                                Manager</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="px-1 text-light app-bg d-flex justify-content-between align-items-center">
+                        <button onclick="window.history.go(-1)" href="javascript:void(0);" type="button"
+                            class="btn-back-no-icon btn--round ui-btn ui-btn-b ui-btn-inline btn-rounded-circle">
+                            Back
+                        </button>
+                        <h4 class="text-center page-main-heading nmarg pad-10">
+                            <b>Connection Requests</b>
+                        </h4>
+                        <i class="text-white fa fa-question-circle" data-toggle="popover" data-placement="bottom"
+                            data-content="" data-trigger="hover" data-original-title="Biz Dev Contacts"></i>
+                    </div>
+                    <div class="d-flex">
+                        <div class="d-flex flex-column w-50 justify-content-center p-2 text-primary border">
+                            <p class="m-auto">Connections</p>
+                            <p class="m-auto">(xx)</p>
+                        </div>
+                        <div class="d-flex flex-column w-50 justify-content-center p-2 bg-primary text-light">
+                            <p class="m-auto">Connection Requests</p>
+                            <p class="m-auto">(xx)</p>
+                        </div>
+                    </div>
+                    <!-- <div class="d-flex w-100 bg-white">
+                        <input type="" name="" id="" class="p-1 ml-2 mt-2 mb-2 custom-search"
+                            placeholder="incoming Connection Requests">
+                        <button class="btn btn-sm btn-secondary-custom text-light mr-2 custom-search-btn"><i
+                                class="fa fa-search fa-lg"></i></button>
+                    </div> -->
+
+                    <div class="d-flex w-100 bg-white justify-content-center pt-3 pb-1 border-bottom-1"> incoming Connection Requests</div>
+
+                    <div class="d-flex align-items-center justify-content-between bg-white">
+                        <p class="p-0 m-auto">
+                            <small>Found: <span class="gray-text-2">(Number of results)</span></small>
+                        </p>
+                        <p class="p-0 m-auto">
+                            <small>Sent Requests (xx)</small>
+                        </p>
+                        <div class="btn-group btn-select-view-custom" role="group" aria-label="Basic example">
+                            <button type="button" onclick="location.href='networking-members-list.html'"
+                                class="btn btn-secondary">
+                                <svg id="SvgjsSvg1001" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                                    version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xmlns:svgjs="http://svgjs.com/svgjs">
+                                    <defs id="SvgjsDefs1002"></defs>
+                                    <g id="SvgjsG1008" transform="matrix(1,0,0,1,0,0)">
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
+                                        height="20">
+                                        <g data-name="Layer 2" fill="#ffffff" class="color000 svgShape">
+                                            <g data-name="list" fill="#ffffff" class="color000 svgShape">
+                                                <rect width="24" height="24" opacity="0" transform="rotate(180 12 12)"
+                                                    fill="#ffffff" class="color000 svgShape"></rect>
+                                                <circle cx="4" cy="7" r="1" fill="#ffffff" class="color000 svgShape">
+                                                </circle>
+                                                <circle cx="4" cy="12" r="1" fill="#ffffff" class="color000 svgShape">
+                                                </circle>
+                                                <circle cx="4" cy="17" r="1" fill="#ffffff" class="color000 svgShape">
+                                                </circle>
+                                                <rect width="14" height="2" x="7" y="11" rx=".94" ry=".94"
+                                                    fill="#ffffff" class="color000 svgShape">
+                                                </rect>
+                                                <rect width="14" height="2" x="7" y="16" rx=".94" ry=".94"
+                                                    fill="#ffffff" class="color000 svgShape">
+                                                </rect>
+                                                <rect width="14" height="2" x="7" y="6" rx=".94" ry=".94" fill="#ffffff"
+                                                    class="color000 svgShape">
+                                                </rect>
+                                            </g>
+                                        </g>
+                                    </g>
+
+                                </svg>
+                            </button>
+                            <button onclick="location.href='networking-members-square.html'" type="button"
+                                class="btn btn-secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                    viewBox="0 0 16 16">
+                                    <path fill="#fff"
+                                        d="M1.99994 4C1.99994 2.89543 2.89537 2 3.99994 2H11.9999C13.1045 2 13.9999 2.89543 13.9999 4V12C13.9999 13.1046 13.1045 14 11.9999 14H3.99994C2.89537 14 1.99994 13.1046 1.99994 12V4ZM3.99994 3C3.44765 3 2.99994 3.44772 2.99994 4V12C2.99994 12.5523 3.44765 13 3.99994 13H11.9999C12.5522 13 12.9999 12.5523 12.9999 12V4C12.9999 3.44772 12.5522 3 11.9999 3H3.99994Z">
+                                    </path>
+                                </svg>
+                            </button>
+                            <button onclick="location.href='networking-members.html'" type="button"
+                                class="btn btn-secondary">
+                                <!--?xml version="1.0" encoding="UTF-8"?-->
+                                <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="20"
+                                    height="20">
+                                    <path
+                                        d="M16,0H8A5,5,0,0,0,3,5V19a5,5,0,0,0,5,5h8a5,5,0,0,0,5-5V5A5,5,0,0,0,16,0Zm3,19a3,3,0,0,1-3,3H8a3,3,0,0,1-3-3V5A3,3,0,0,1,8,2h8a3,3,0,0,1,3,3Z"
+                                        fill="#ffffff"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="pricing crm crm-contacts">
+                        <div class="mt-0 crm-contacts-comp network-members-comp">
+                            <div id="one" class="ui-body-d ui-content">
+                                <div class="p-0 m-0 ui-grid-a">
+                                    <div class="w-100">
+                                        <div class="flex-wrap p-0 mx-1 crm-contacts-comp d-flex bg-light">
+                                            <div onclick="location.href='networking-group-page.html'" class="p-1 w-50">
+                                                <div class="entry--opportunities marketplace--cards br-7 border--light">
+                                                    <div class="pt-2 img-round-profile">
+                                                        <img src="./images/user-pic-1.PNG" class="mx-auto" alt="">
+                                                    </div>
+                                                    <div class="mt-2 text-center">
+                                                        <h4 class="m-0 font-14 font-weight-bold">{1st,
+                                                            last Name}</h4>
+                                                        <p class="my-0 font-14">{Business Name}</p>
+                                                        <a href="javascript:void(0);"
+                                                            class="text-white badge badge-primary mb-25 w-50">CEO</a>
+                                                        <p class="my-0 font-14">{Title}</p>
+                                                    </div>
+                                                    <div
+                                                        class="justify-content-between d-flex ml-auto mr-auto mt-2 mb-2 w-50">
+                                                        <div class="p-25">
+                                                            <img src="images/diamonds-05.svg" width="30" alt=""
+                                                                class="p-0 bg-transparent border-0 img-fluid">
+                                                        </div>
+                                                        <div class="p-25">
+                                                            <img src="images/diamonds-05.svg" width="30" alt=""
+                                                                class="p-0 bg-transparent border-0 img-fluid">
+                                                        </div>
+                                                        <div class="p-25">
+                                                            <img src="images/diamonds-03.svg" width="30" alt=""
+                                                                class="p-0 bg-transparent border-0 img-fluid">
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex w-75 m-auto justify-content-between">
+                                                        <div class="d-flex flex-column">
+                                                            <i class="fa fa-handshake-o fs-17 handshaky"></i>
+                                                            (xx)
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <i class="fa fa-link fs-17"></i> (xx)
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <img src="images/Icons-in-Black-02.svg" width="25" alt="">
+                                                            (xx)
+                                                        </div>
+                                                    </div>                                                    
+                                                </div>
+                                                <div class="d-flex">
+                                                    <button
+                                                        class="btn btn-sm btn-success-custom m-0 text-light"><small>Accept</small></button>
+                                                    <button
+                                                        class="btn btn-sm btn-danger-custom m-0 text-light"><small>Decline</small></button>
+                                                </div>
+                                            </div>
+                                            <div onclick="location.href='networking-group-page.html'" class="p-1 w-50">
+                                                <div class="entry--opportunities marketplace--cards br-7 border--light">
+                                                    <div class="pt-2 img-round-profile">
+                                                        <img src="./images/user-pic-1.PNG" class="mx-auto" alt="">
+                                                    </div>
+                                                    <div class="mt-2 text-center">
+                                                        <h4 class="m-0 font-14 font-weight-bold">{1st,
+                                                            last Name}</h4>
+                                                        <p class="my-0 font-14">{Business Name}</p>
+                                                        <a href="javascript:void(0);"
+                                                            class="text-white badge badge-primary mb-25 w-50">CEO</a>
+                                                        <p class="my-0 font-14">{Title}</p>
+                                                    </div>
+                                                    <div
+                                                        class="justify-content-between d-flex ml-auto mr-auto mt-2 mb-2 w-50">
+                                                        <div class="p-25">
+                                                            <img src="images/diamonds-05.svg" width="30" alt=""
+                                                                class="p-0 bg-transparent border-0 img-fluid">
+                                                        </div>
+                                                        <div class="p-25">
+                                                            <img src="images/diamonds-05.svg" width="30" alt=""
+                                                                class="p-0 bg-transparent border-0 img-fluid">
+                                                        </div>
+                                                        <div class="p-25">
+                                                            <img src="images/diamonds-03.svg" width="30" alt=""
+                                                                class="p-0 bg-transparent border-0 img-fluid">
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex w-75 m-auto justify-content-between">
+                                                        <div class="d-flex flex-column">
+                                                            <i class="fa fa-handshake-o fs-17 handshaky"></i>
+                                                            (xx)
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <i class="fa fa-link fs-17"></i> (xx)
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <img src="images/Icons-in-Black-02.svg" width="25" alt="">
+                                                            (xx)
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <button
+                                                        class="btn btn-sm btn-success-custom m-0 text-light"><small>Accept</small></button>
+                                                    <button
+                                                        class="btn btn-sm btn-danger-custom m-0 text-light"><small>Decline</small></button>
+                                                </div>
+                                            </div>
+
+                                            <div onclick="location.href='networking-group-page.html'" class="p-1 w-50">
+                                                <div class="entry--opportunities marketplace--cards br-7 border--light">
+                                                    <div class="pt-2 img-round-profile">
+                                                        <img src="./images/user-pic-1.PNG" class="mx-auto" alt="">
+                                                    </div>
+                                                    <div class="mt-2 text-center">
+                                                        <h4 class="m-0 font-14 font-weight-bold">{1st,
+                                                            last Name}</h4>
+                                                        <p class="my-0 font-14">{Business Name}</p>
+                                                        <a href="javascript:void(0);"
+                                                            class="text-white badge badge-primary mb-25 w-50">CEO</a>
+                                                        <p class="my-0 font-14">{Title}</p>
+                                                    </div>
+                                                    <div
+                                                        class="justify-content-between d-flex ml-auto mr-auto mt-2 mb-2 w-50">
+                                                        <div class="p-25">
+                                                            <img src="images/diamonds-05.svg" width="30" alt=""
+                                                                class="p-0 bg-transparent border-0 img-fluid">
+                                                        </div>
+                                                        <div class="p-25">
+                                                            <img src="images/diamonds-05.svg" width="30" alt=""
+                                                                class="p-0 bg-transparent border-0 img-fluid">
+                                                        </div>
+                                                        <div class="p-25">
+                                                            <img src="images/diamonds-03.svg" width="30" alt=""
+                                                                class="p-0 bg-transparent border-0 img-fluid">
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex w-75 m-auto justify-content-between">
+                                                        <div class="d-flex flex-column">
+                                                            <i class="fa fa-handshake-o fs-17 handshaky"></i>
+                                                            (xx)
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <i class="fa fa-link fs-17"></i> (xx)
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <img src="images/Icons-in-Black-02.svg" width="25" alt="">
+                                                            (xx)
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex p-1 mt-1">
+                                                        <button
+                                                            class="btn btn-sm btn-success-custom m-0 text-light"><small>Accept</small></button>
+                                                        <button
+                                                            class="btn btn-sm btn-danger-custom m-0 text-light"><small>Decline</small></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div onclick="location.href='networking-group-page.html'" class="p-1 w-50">
+                                                <div class="entry--opportunities marketplace--cards br-7 border--light">
+                                                    <div class="pt-2 img-round-profile">
+                                                        <img src="./images/user-pic-1.PNG" class="mx-auto" alt="">
+                                                    </div>
+                                                    <div class="mt-2 text-center">
+                                                        <h4 class="m-0 font-14 font-weight-bold">{1st,
+                                                            last Name}</h4>
+                                                        <p class="my-0 font-14">{Business Name}</p>
+                                                        <a href="javascript:void(0);"
+                                                            class="text-white badge badge-primary mb-25 w-50">CEO</a>
+                                                        <p class="my-0 font-14">{Title}</p>
+                                                    </div>
+                                                    <div
+                                                        class="justify-content-between d-flex ml-auto mr-auto mt-2 mb-2 w-50">
+                                                        <div class="p-25">
+                                                            <img src="images/diamonds-05.svg" width="30" alt=""
+                                                                class="p-0 bg-transparent border-0 img-fluid">
+                                                        </div>
+                                                        <div class="p-25">
+                                                            <img src="images/diamonds-05.svg" width="30" alt=""
+                                                                class="p-0 bg-transparent border-0 img-fluid">
+                                                        </div>
+                                                        <div class="p-25">
+                                                            <img src="images/diamonds-03.svg" width="30" alt=""
+                                                                class="p-0 bg-transparent border-0 img-fluid">
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex w-75 m-auto justify-content-between">
+                                                        <div class="d-flex flex-column">
+                                                            <i class="fa fa-handshake-o fs-17 handshaky"></i>
+                                                            (xx)
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <i class="fa fa-link fs-17"></i> (xx)
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <img src="images/Icons-in-Black-02.svg" width="25" alt="">
+                                                            (xx)
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex p-1 mt-1">
+                                                        <button
+                                                            class="btn btn-sm btn-success-custom m-0 text-light"><small>Accept</small></button>
+                                                        <button
+                                                            class="btn btn-sm btn-danger-custom m-0 text-light"><small>Decline</small></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <div onclick="location.href='networking-group-page.html'" class="p-1 w-50">
+                                                <div class="entry--opportunities marketplace--cards br-7 border--light">
+                                                    <div class="pt-2 img-round-profile">
+                                                        <img src="./images/user-pic-1.PNG" class="mx-auto" alt="">
+                                                    </div>
+                                                    <div class="mt-2 text-center">
+                                                        <h4 class="m-0 font-14 font-weight-bold">{1st,
+                                                            last Name}</h4>
+                                                        <p class="my-0 font-14">{Business Name}</p>
+                                                        <a href="javascript:void(0);"
+                                                            class="text-white badge badge-primary mb-25 w-50">CEO</a>
+                                                        <p class="my-0 font-14">{Title}</p>
+                                                    </div>
+                                                    <div
+                                                        class="justify-content-between d-flex ml-auto mr-auto mt-2 mb-2 w-50">
+                                                        <div class="p-25">
+                                                            <img src="images/diamonds-05.svg" width="30" alt=""
+                                                                class="p-0 bg-transparent border-0 img-fluid">
+                                                        </div>
+                                                        <div class="p-25">
+                                                            <img src="images/diamonds-05.svg" width="30" alt=""
+                                                                class="p-0 bg-transparent border-0 img-fluid">
+                                                        </div>
+                                                        <div class="p-25">
+                                                            <img src="images/diamonds-03.svg" width="30" alt=""
+                                                                class="p-0 bg-transparent border-0 img-fluid">
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex w-75 m-auto justify-content-between">
+                                                        <div class="d-flex flex-column">
+                                                            <i class="fa fa-handshake-o fs-17 handshaky"></i>
+                                                            (xx)
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <i class="fa fa-link fs-17"></i> (xx)
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <img src="images/Icons-in-Black-02.svg" width="25" alt="">
+                                                            (xx)
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex p-1 mt-1">
+                                                        <button
+                                                            class="btn btn-sm btn-success-custom m-0 text-light"><small>Accept</small></button>
+                                                        <button
+                                                            class="btn btn-sm btn-danger-custom m-0 text-light"><small>Decline</small></button>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+
+                                            <!-- <div onclick="location.href='networking-group-page.html'" class="p-1 w-50">
+                                                <div class="entry--opportunities marketplace--cards br-7 border--light">
+                                                    <div class="pt-2 img-round-profile">
+                                                        <img src="./images/user-pic-1.PNG" class="mx-auto" alt="">
+                                                    </div>
+                                                    <div class="mt-2 text-center">
+                                                        <h4 class="m-0 font-14 font-weight-bold">{1st,
+                                                            last Name}</h4>
+                                                        <p class="my-0 font-14">{Business Name}</p>
+                                                        <a href="javascript:void(0);"
+                                                            class="text-white badge badge-primary mb-25 w-50">CEO</a>
+                                                        <p class="my-0 font-14">{Title}</p>
+                                                    </div>
+                                                    <div
+                                                        class="justify-content-between d-flex ml-auto mr-auto mt-2 mb-2 w-50">
+                                                        <div class="p-25">
+                                                            <img src="images/diamonds-05.svg" width="30" alt=""
+                                                                class="p-0 bg-transparent border-0 img-fluid">
+                                                        </div>
+                                                        <div class="p-25">
+                                                            <img src="images/diamonds-05.svg" width="30" alt=""
+                                                                class="p-0 bg-transparent border-0 img-fluid">
+                                                        </div>
+                                                        <div class="p-25">
+                                                            <img src="images/diamonds-03.svg" width="30" alt=""
+                                                                class="p-0 bg-transparent border-0 img-fluid">
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex w-75 m-auto justify-content-between">
+                                                        <div class="d-flex flex-column">
+                                                            <i class="fa fa-handshake-o fs-17 handshaky"></i>
+                                                            (xx)
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <i class="fa fa-link fs-17"></i> (xx)
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <img src="images/Icons-in-Black-02.svg" width="25" alt="">
+                                                            (xx)
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex p-1 mt-1">
+                                                        <button
+                                                            class="btn btn-sm btn-success-custom m-0 text-light"><small>Accept</small></button>
+                                                        <button
+                                                            class="btn btn-sm btn-danger-custom m-0 text-light"><small>Decline</small></button>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+
+                                            <!-- <div onclick="location.href='networking-group-page.html'" class="p-1 w-50">
+                                                <div class="entry--opportunities marketplace--cards br-7 border--light">
+                                                    <div class="pt-2 img-round-profile">
+                                                        <img src="./images/user-pic-1.PNG" class="mx-auto" alt="">
+                                                    </div>
+                                                    <div class="mt-2 text-center">
+                                                        <h4 class="m-0 font-14 font-weight-bold">{1st,
+                                                            last Name}</h4>
+                                                        <p class="my-0 font-14">{Business Name}</p>
+                                                        <a href="javascript:void(0);"
+                                                            class="text-white badge badge-primary mb-25 w-50">CEO</a>
+                                                        <p class="my-0 font-14">{Title}</p>
+                                                    </div>
+                                                    <div
+                                                        class="justify-content-between d-flex ml-auto mr-auto mt-2 mb-2 w-50">
+                                                        <div class="p-25">
+                                                            <img src="images/diamonds-05.svg" width="30" alt=""
+                                                                class="p-0 bg-transparent border-0 img-fluid">
+                                                        </div>
+                                                        <div class="p-25">
+                                                            <img src="images/diamonds-05.svg" width="30" alt=""
+                                                                class="p-0 bg-transparent border-0 img-fluid">
+                                                        </div>
+                                                        <div class="p-25">
+                                                            <img src="images/diamonds-03.svg" width="30" alt=""
+                                                                class="p-0 bg-transparent border-0 img-fluid">
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex w-75 m-auto justify-content-between">
+                                                        <div class="d-flex flex-column">
+                                                            <i class="fa fa-handshake-o fs-17 handshaky"></i>
+                                                            (xx)
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <i class="fa fa-link fs-17"></i> (xx)
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <img src="images/Icons-in-Black-02.svg" width="25" alt="">
+                                                            (xx)
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex p-1 mt-1">
+                                                        <button
+                                                            class="btn btn-sm btn-success-custom m-0 text-light"><small>Accept</small></button>
+                                                        <button
+                                                            class="btn btn-sm btn-danger-custom m-0 text-light"><small>Decline</small></button>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="" data-position="fixed" role="contentinfo" class="ui-footer ui-bar-inherit ui-footer-fixed">
+            <div class="text-center footer-block">
+                <div class="ui-grid-c">
+                    <div class="ui-block-a">
+                        <div class="footer-btn-block">
+                            <a href="home.html" rel="external" class="footer-link active">
+                                <span class="footer-icon fa fa-home"></span><br /><span
+                                    class="footer-icon-text">Home</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ui-block-b">
+                        <div class="footer-btn-block">
+                            <a href="connections.html" rel="external" class="footer-link">
+                                <span class="footer-icon fa fa-users"></span><span
+                                    class="footer-badge">90</span><br /><span class="footer-icon-text">My
+                                    Connections</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ui-block-c">
+                        <div class="footer-btn-block">
+                            <a href="meeting-manager.html" rel="external" class="footer-link">
+                                <span class="footer-icon fa fa-calendar"></span><span
+                                    class="footer-badge">7</span><br /><span class="footer-icon-text">Meetings</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ui-block-d">
+                        <div class="footer-btn-block">
+                            <a href="messages.html" rel="external" class="footer-link">
+                                <span class="footer-icon fa fa-envelope"></span><span
+                                    class="footer-badge">50</span><br /><span class="footer-icon-text">Messages</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/dashboard.js"></script>
+
+    <div class="ui-loader ui-corner-all ui-body-a ui-loader-default">
+        <span class="ui-icon-loading"></span>
+        <h1>loading</h1>
+    </div>
+</body>
+
+</html>
